@@ -1,0 +1,11 @@
+{
+ "suggest.noselect": false,
+ "diagnostic.level": "error",
+ "suggest.autoTrigger": "always",
+ "suggest.floatEnable": true,
+ "suggest.maxPreviewWidth": 80,
+ "suggest.maxCompleteItemCount": 50,
+ "Lua.hint.enable": true,
+ "Lua.completion.callSnippet": "Both",
+// "snippets.userSnippetDirectory": "~/.config/nvim/snippets"
+}
