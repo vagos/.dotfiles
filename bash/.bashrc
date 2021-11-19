@@ -1,6 +1,4 @@
 # ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -10,8 +8,8 @@ export PS1='\[\e[34m\][🦍 \W]$\[\e[37m\] '
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
-export TASKRC=~/.config/task/taskrc
 export MANPAGER="nvim -c 'set ft=man' -"
+export TASKRC=~/.config/task/taskrc
 #export PAGER="nvim -c 'set ft=man' -"
 
 export LANG=en_US.UTF-8
@@ -28,7 +26,7 @@ bind -x '"\C-l": clear'
 
 alias ranger='ranger --choosedir=$HOME/.config/ranger/.rangerdir; LASTDIR=`cat $HOME/.config/ranger/.rangerdir`; cd "$LASTDIR"'
 alias lr='ranger'
-alias ls='ls -1 --color=auto'
+alias ls='ls --color=auto'
 alias vim=nvim
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 

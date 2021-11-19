@@ -35,9 +35,15 @@ Plug 'honza/vim-snippets'
 " Dev Icons
 Plug 'ryanoasis/vim-devicons'
 
+" fcitx support 
+Plug 'lilydjwg/fcitx.vim'
+
 " FzF 
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
+
+" REPL
+Plug 'jpalardy/vim-slime'
 
 call plug#end()
 
@@ -48,3 +54,5 @@ source $HOME/.config/nvim/plugin-settings/vimwiki.vim
 source $HOME/.config/nvim/plugin-settings/landscape.vim
 source $HOME/.config/nvim/plugin-settings/vimspector.vim
 source $HOME/.config/nvim/plugin-settings/polyglot.vim
+source $HOME/.config/nvim/plugin-settings/fcitx.vim
+source $HOME/.config/nvim/plugin-settings/vim-slime.vim

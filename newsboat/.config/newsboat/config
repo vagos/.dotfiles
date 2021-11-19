@@ -1,0 +1,3 @@
+include /usr/share/doc/newsboat/contrib/colorschemes/inkpot
+
+auto-reload yes

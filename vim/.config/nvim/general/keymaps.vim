@@ -10,3 +10,9 @@ vmap > >gv
 
 nnoremap n nzz
 nnoremap N Nzz
+
+" Spell Check
+
+set spelllang=en,el
+
+nnoremap <silent> <F6> :set spell!<cr>
