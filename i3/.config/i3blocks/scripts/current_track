@@ -1,0 +1,25 @@
+#!/usr/bin/python
+import mpd
+import random
+
+mpdClient = mpd.MPDClient()
+
+mpdClient.connect("127.0.0.1", 6600)
+
+
+if (not mpdClient.status()["state"] == "play"):
+     exit()
+
+songCurrent = mpdClient.currentsong()
+
+sSongTitle = songCurrent["title"]
+
+
+sNotes = "♩♪♫♬" 
+
+if "-" in sSongTitle:
+    print("{} {}".format(random.choice(sNotes), sSongTitle))
+else:
+    sArtist = songCurrent["artist"]
+    print("{} {} - {}".format(random.choice(sNotes),sArtist,sSongTitle)) 
+
