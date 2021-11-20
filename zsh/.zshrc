@@ -1,8 +1,11 @@
+# Lines configured by zsh-newuser-install
+# End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/vagozino/.zshrc'
 
 autoload -Uz compinit
 compinit
+# End of lines added by compinstall
 
 # Enable History
 
@@ -19,6 +22,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export MANPAGER="nvim -c 'set ft=man' -"
 export TASKRC=~/.config/task/taskrc
+#export PAGER="nvim -c 'set ft=man' -"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -33,6 +37,8 @@ export KEYTIMEOUT=1
 # Some extra keybinds
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# Enable ctr+L to clear
 # bindkey -x '"\C-l": clear'
 
 # Aliases

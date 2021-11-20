@@ -10,7 +10,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export MANPAGER="nvim -c 'set ft=man' -"
 export TASKRC=~/.config/task/taskrc
-#export PAGER="nvim -c 'set ft=man' -"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

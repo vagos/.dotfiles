@@ -16,7 +16,7 @@ set $mod Mod4
 font pango: Cozette 11
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#8ont pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -169,7 +169,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+k exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+k exec "i3-nagbar -t warning -m 'End X session?' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -205,9 +205,18 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	status_command i3blocks
-	#status_command i3status	
 	tray_output none
 	separator_symbol "::" 
+
+    colors {
+    separator #444444
+    background #222222
+    statusline #B1B1B1
+    focused_workspace #B1B1B1 #B1B1B1 #000000
+    active_workspace #333333 #333333 #888888
+    inactive_workspace #B1B1B1 #333333 #f1f1f1
+    urgent_workspace #eb709b #eb709b #ffffff
+    }
 
 }
 
