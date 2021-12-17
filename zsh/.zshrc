@@ -6,6 +6,7 @@ zstyle :compinstall filename '/home/vagozino/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+# autoload -U edit-command-line
 
 # Enable History
 
@@ -17,12 +18,11 @@ autoload -U colors && colors
 PROMPT='%F{blue}[🦍 %1~]$%f '
 
 # Exports
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export MANPAGER="nvim -c 'set ft=man' -"
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export MANPAGER="nvim +Man!"
 export TASKRC=~/.config/task/taskrc
-#export PAGER="nvim -c 'set ft=man' -"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

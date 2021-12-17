@@ -33,12 +33,16 @@ exec --no-startup-id nm-applet
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle        && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Adjust Brightness
 bindsym XF86MonBrightnessUp exec sudo light -A 10
 bindsym XF86MonBrightnessDown exec sudo light -U 10
+
+# Take Screenshots
+
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "$HOME/Downloads/$(date +%s).png"
 
 # Control MPD
 bindsym XF86AudioPlay exec mpc toggle && pkill -SIGRTMIN+10 i3blocks
@@ -186,10 +190,10 @@ mode "resize" {
 
 # same bindings, but for the arrow keys
 # p> " 'Q' in normal mode enters Ex mode. You almost never want this.
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
+    bindsym Left resize shrink width 50 px or 10 ppt
+    bindsym Down resize grow height 50 px or 10 ppt
+    bindsym Up resize shrink height 50 px or 10 ppt
+    bindsym Right resize grow width 50 px or 10 ppt
 
 # back to normal: Enter or Escape or $mod+r
     bindsym Return mode "default"
