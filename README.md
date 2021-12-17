@@ -10,4 +10,4 @@ cd .dotfiles/
 stow <name-of-folder>
 ```
 
-If any errors occur, that means that you have conflicting dotfiles. Backup them somewhere and try again.
+If any errors occur, that means that you have conflicting dotfiles. Back them up somewhere and try again.
