@@ -1,0 +1,16 @@
+# $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope.sh"
+
+set previewer ~/.config/lf/scope.sh
+
+set ratios 1:2
+set info size:time
+
+cmd setwallpaper ${{
+    python ~/Projects/Scripts/ChangeBackground.py $f
+}}
+
+map bg setwallpaper
+
+map D delete
+
+map . set hidden!

@@ -1,26 +1,28 @@
 # Lines configured by zsh-newuser-install
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/vagozino/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 # autoload -U edit-command-line
 
-# Enable History
+# Sourcing
+source "$HOME/.config/lf/lfcd.sh"
 
+# Enable History
 HITSTSIZE=100
 SAVEHIST=100
-HISTFILE=~/.cache/zsh/history
+HISTFILE=$HOME/cache/zsh/history
 
 autoload -U colors && colors
 PROMPT='%F{blue}[🦍 %1~]$%f '
 
 # Exports
 export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 export MANPAGER="nvim +Man!"
 export TASKRC=~/.config/task/taskrc
 
@@ -43,13 +45,13 @@ bindkey "^[[1;5D" backward-word
 
 # Aliases
 
-alias ranger='ranger --choosedir=$HOME/.config/ranger/.rangerdir; LASTDIR=`cat $HOME/.config/ranger/.rangerdir`; cd "$LASTDIR"'
-alias lr='ranger'
+# alias ranger='ranger --choosedir=$HOME/.config/ranger/.rangerdir; LASTDIR=`cat $HOME/.config/ranger/.rangerdir`; cd "$LASTDIR"'
+# alias lr='ranger'
 alias ls='ls --color=auto'
-alias vim=nvim
+alias lf='lfcd'
 
 # Add stuff to PATH
-export PATH=$PATH:/home/vagozino/.local/bin:$HOME/.local/share/gem/ruby/2.7.0/bin:$HOME/Projects/Scripts
+export PATH=$PATH:$HOME/.local/bin:$HOME/.local/share/gem/ruby/2.7.0/bin:$HOME/Projects/Scripts
 
 # Plugins
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
