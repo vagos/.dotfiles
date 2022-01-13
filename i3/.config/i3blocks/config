@@ -1,26 +1,29 @@
-SCRIPT_DIR=/home/vagozino/.config/i3blocks/scripts
+SCRIPTS=/home/vagozino/.config/i3blocks/scripts
 
 [current_track]
-command=$SCRIPT_DIR/current_track
+command=$SCRIPTS/current_track
 interval=once
 signal=10
 
 [disk]
-command=$SCRIPT_DIR/disk
+command=$SCRIPTS/disk
 interval=60
 
 [volume-pulseaudio]
-command=$SCRIPT_DIR/volume-pulseaudio
+command=$SCRIPTS/volume-pulseaudio
 interval=persist
 SUBSCRIBE=1
 USE_ALSA_NAME=1
 
 [time]
-command=$SCRIPT_DIR/time
+command=$SCRIPTS/time
 interval=50
 #TZ_FILE=~/.tz
 STRFTIME_FORMAT=%a %d %b %H:%M
-TZONES=$DEFAULT_TZ, Dab
-TZ_LABELS=,Dab
+TZONES=$DEFAULT_TZ,$DEFAULT_TZ
+TZ_LABELS=,
 
-
+[battery]
+command=$SCRIPTS/battery
+markup=pango
+interval=30

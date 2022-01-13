@@ -275,20 +275,17 @@ def_key "2"
 def_key "2"
    reset_search_engine
 
-#def_key "3"
-#  show_search_engine
-#
-#def_key "3"
-#  reset_search_engine
-#
+def_key "3"
+  reset_search_engine
+
 def_key "4"
   show_browser
 
-def_key "3"
-  show_playlist_editor
-#
+# def_key "3"
+#   show_playlist_editor
+
 def_key "5"
-  dummy
+  show_visualizer
 
 def_key "6"
   dummy 
@@ -297,7 +294,7 @@ def_key "7"
   dummy
 #
 def_key "8"
-  dummy  
+  dummy
 #
 def_key "="
  volume_up

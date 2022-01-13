@@ -69,7 +69,6 @@ mpd_music_dir = ~/Music
 ## visualizer.
 ##
 #
-visualizer_data_source = /tmp/mpd.fifo
 # visualizer_data_source = /tmp/mpd.fifo
 #
 ##
@@ -527,7 +526,7 @@ startup_screen = playlist
 #
 #search_engine_default_search_mode = 1
 #
-external_editor = vim
+external_editor = nvim
 #
 ## Note: set to yes if external editor is a console application.
 ##

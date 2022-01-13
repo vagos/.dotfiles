@@ -1,4 +1,4 @@
-#ibus-daemon &    # Input method
+# ibus-daemon -drx    # Input method
 mopidy &         # Start up music
 # sudo light -S 50 # Set brightness
 picom &          # Start compositor
@@ -10,4 +10,4 @@ setxkbmap -option caps:escape # Set CAPS to ESC
 xset s off # Disable screen sleep
 xset -dpms
 
-exec i3 # Start i3-wm
+exec i3 # Start window manager

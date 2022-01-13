@@ -14,7 +14,7 @@ source "$HOME/.config/lf/lfcd.sh"
 # Enable History
 HITSTSIZE=100
 SAVEHIST=100
-HISTFILE=$HOME/cache/zsh/history
+HISTFILE=$HOME/.cache/zsh/history
 
 autoload -U colors && colors
 PROMPT='%F{blue}[🦍 %1~]$%f '
@@ -51,7 +51,7 @@ alias ls='ls --color=auto'
 alias lf='lfcd'
 
 # Add stuff to PATH
-export PATH=$PATH:$HOME/.local/bin:$HOME/.local/share/gem/ruby/2.7.0/bin:$HOME/Projects/Scripts
+export PATH=$PATH:$HOME/.local/bin:$HOME/files/scripts
 
 # Plugins
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
