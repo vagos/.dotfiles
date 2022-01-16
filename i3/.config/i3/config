@@ -61,7 +61,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # change desktop background
-bindsym $mod+b --release exec --no-startup-id bash ~/Projects/Scripts/ChangeBackground.sh
+bindsym $mod+b --release exec --no-startup-id ~/files/scripts/change_bg.sh
 
 # Scratchpas Stuff
 bindsym $mod+s move scratchpad

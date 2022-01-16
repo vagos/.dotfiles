@@ -1,22 +1,24 @@
-https://lukesmith.xyz/rss.xml "~Luke Smith"
-https://www.huniepot.com/rss "~HuniePop News"
-https://sbox.facepunch.com/rss/news "~S&box News"
-https://internalpointers.com/rss "~Internal Pointers"
-https://projecteuler.net/rss2_euler.xml "~Project Euler"
-https://landchad.net/rss.xml "~ LandChad"
-https://based.cooking/rss.xml "~ Based Cooking"
-https://www.lua.org/news.rss "~Lua News"
-https://joshtronic.com/atom.xml "~Josh Tronic"
-https://feeds.fireside.fm/titansoftext/rss "~Titans of Text Podcast"
-https://m-chrzan.xyz/rss.xml "~Martin Chrzanowski"
-http://cyber.dabamos.de/blog/feed.rss "~The Cyber Vanguard - Lazy Reading"
-https://jacobwsmith.xyz/rss.xml "~Jacob W Smith"
-https://tomfasano.xyz/rss.xml "~Tom-Fasano"
-https://lukebubar.xyz/rss.xml "~Luke-Bubar"
-https://hen.ee/feed.xml "~Hen-Ee"
-http://www.bay12games.com/dwarves/dev_now.rss "~Dwarf-Fortress"
-https://hyperthings.garden/rss/all-posts.xml "~HyperthingsGarden"
-https://dpc.pw/feed/ "~David Ciezarkiewicz"
-http://blog.cleancoder.com/atom.xml "~CleanCoder"
-https://thevaluable.dev/index.xml "~The Valuable Dev"
-http://osblog.stephenmarz.com/feed.rss "~Stephen Marz"
+https://lukesmith.xyz/rss.xml 
+https://www.huniepot.com/rss news game
+https://sbox.facepunch.com/rss/news news
+https://internalpointers.com/rss 
+https://projecteuler.net/rss2_euler.xml
+https://landchad.net/rss.xml 
+https://based.cooking/rss.xml 
+https://www.lua.org/news.rss news
+https://joshtronic.com/atom.xml 
+https://feeds.fireside.fm/titansoftext/rss 
+https://m-chrzan.xyz/rss.xml 
+http://cyber.dabamos.de/blog/feed.rss 
+https://jacobwsmith.xyz/rss.xml 
+https://tomfasano.xyz/rss.xml 
+https://lukebubar.xyz/rss.xml 
+https://hen.ee/feed.xml 
+http://www.bay12games.com/dwarves/dev_now.rss game news
+https://hyperthings.garden/rss/all-posts.xml 
+https://dpc.pw/feed/ 
+http://blog.cleancoder.com/atom.xml 
+https://thevaluable.dev/index.xml 
+http://osblog.stephenmarz.com/feed.rss 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAYKj_peyESIMDp5LtHlH2A youtube
