@@ -32,6 +32,10 @@ set autochdir                           " Your working directory will always be 
 set noswapfile                          " No more swap files 
 set ignorecase
 
+filetype on
+filetype indent on
 filetype plugin on
 
 au! BufWritePost $HOME/.config/init.vim source %
+
+colorscheme landscape

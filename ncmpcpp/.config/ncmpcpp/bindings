@@ -275,14 +275,11 @@ def_key "2"
 def_key "2"
    reset_search_engine
 
-def_key "3"
-  reset_search_engine
-
 def_key "4"
   show_browser
 
-# def_key "3"
-#   show_playlist_editor
+def_key "3"
+  show_playlist_editor
 
 def_key "5"
   show_visualizer

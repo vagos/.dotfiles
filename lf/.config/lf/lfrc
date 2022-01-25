@@ -6,7 +6,7 @@ set ratios 1:2
 set info size:time
 
 cmd setwallpaper ${{
-    python ~/Projects/Scripts/ChangeBackground.py $f
+    bash ~/files/scripts/change_bg.sh $f
 }}
 
 map bg setwallpaper

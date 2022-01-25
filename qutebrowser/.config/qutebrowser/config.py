@@ -1,8 +1,9 @@
 config.load_autoconfig()
 
 c.url.start_pages = ["~/"] 
-c.url.searchengines["DEFAULT"] = "https://www.google.com.ar/search?q={}"
+# c.url.searchengines["DEFAULT"] = " https://searx.tiekoetter.com/search?q={}" # use a random searx instance
 c.url.searchengines["yt"] = "https://www.youtube.com/results?search_query={}"
+c.url.searchengines["DEFAULT"] = "https://www.google.com/search?q={}"
 
 c.content.fullscreen.window = True
 
