@@ -405,7 +405,7 @@ titles_visibility = no
 #
 #cyclic_scrolling = no
 #
-lyrics_fetchers = genius, azlyrics, internet
+lyrics_fetchers = azlyrics, internet
 #
 #follow_now_playing_lyrics = no
 #
