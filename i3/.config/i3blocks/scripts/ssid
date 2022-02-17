@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 SSID=$(iw wlo1 info | awk '/ssid/ {print $2}')
-echo $SSID
+echo 直 $SSID
 #-----------------------------------------------------------------------
 if [[ -z "$INTERFACE" ]] ; then
     INTERFACE="${BLOCK_INSTANCE:-wlan0}"
@@ -35,4 +35,4 @@ fi
 SSID=$(iw "$INTERFACE" info | awk '/ssid/ {print $2}')
 
 #------------------------------------------------------------------------
-echo "$SSID" # short text
+echo 直 "$SSID" # short text

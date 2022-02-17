@@ -1,5 +1,9 @@
 SCRIPTS=/home/vagozino/.config/i3blocks/scripts
 
+[ssid]
+command=$SCRIPTS/ssid
+interval=30
+
 [current_track]
 command=$SCRIPTS/current_track
 interval=once
@@ -15,6 +19,11 @@ interval=persist
 SUBSCRIBE=1
 USE_ALSA_NAME=1
 
+[battery]
+command=$SCRIPTS/battery
+markup=pango
+interval=30
+
 [time]
 command=$SCRIPTS/time
 interval=50
@@ -22,8 +31,3 @@ interval=50
 STRFTIME_FORMAT=%a %d %b %H:%M
 TZONES=$DEFAULT_TZ,$DEFAULT_TZ
 TZ_LABELS=,
-
-[battery]
-command=$SCRIPTS/battery
-markup=pango
-interval=30
