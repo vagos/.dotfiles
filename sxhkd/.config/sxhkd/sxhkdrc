@@ -1,0 +1,8 @@
+XF86MonBrightness{Up,Down} 
+    sudo light -{A,U} 10
+
+super + Print
+    maim --window $(xdotool getactivewindow) "$HOME/downloads/$(xwininfo -id $(xdotool getactivewindow) | grep -oP 'xwininfo:.+ \K".*"' | tr -d '"')_$(date +%s).png"
+
+super + Return
+    $TERMINAL
