@@ -1,9 +1,11 @@
-mopidy &         # Start up music
-picom &          # Start compositor
+mopidy & # Start up music
+picom  & # Start compositor
+sxhkd  &
 
 setxkbmap -option caps:escape # Set CAPS to ESC
 
-xset s off # Disable screen sleep
+# Disable screen sleep
+xset s off 
 xset -dpms
 
 exec i3 # Start window manager

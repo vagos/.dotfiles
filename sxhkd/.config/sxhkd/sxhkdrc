@@ -1,8 +1,19 @@
 XF86MonBrightness{Up,Down} 
     sudo light -{A,U} 10
+XF86Calculator 
+    alacritty -e python
+XF86Audio{Raise,Lower}Volume 
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}10% 
+XF86AudioMute 
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86AudioMicMute 
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+XF86AudioPlay 
+    mpc toggle # && pkill -SIGRTMIN+10 i3blocks
 
 super + Print
     maim --window $(xdotool getactivewindow) "$HOME/downloads/$(xwininfo -id $(xdotool getactivewindow) | grep -oP 'xwininfo:.+ \K".*"' | tr -d '"')_$(date +%s).png"
-
 super + Return
     $TERMINAL
+control + alt + b
+    change_bg.sh
