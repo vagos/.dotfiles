@@ -16,4 +16,4 @@ super + Print
 super + Return
     $TERMINAL
 control + alt + b
-    change_bg.sh
+    change_bg
