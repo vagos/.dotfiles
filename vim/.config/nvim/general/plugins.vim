@@ -4,9 +4,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Autocompletion Plugin - CoC 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" A Vim Plugin for Lively Previewing LaTeX PDF Output
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-
  " Colorschemes
 Plug 'itchyny/landscape.vim'
 
@@ -35,11 +32,11 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'godlygeek/tabular'
 
 " fcitx support 
-" Plug 'lilydjwg/fcitx.vim'
+Plug 'lilydjwg/fcitx.vim'
 
-" FzF 
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
+" File navigation
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " REPL
 " Plug 'jpalardy/vim-slime'
@@ -47,10 +44,10 @@ Plug 'godlygeek/tabular'
 call plug#end()
 
 source $HOME/.config/nvim/plugin-settings/coc.vim
-source $HOME/.config/nvim/plugin-settings/latex-live-preview.vim
 source $HOME/.config/nvim/plugin-settings/lightline.vim
 source $HOME/.config/nvim/plugin-settings/vimwiki.vim
 source $HOME/.config/nvim/plugin-settings/vimspector.vim
 source $HOME/.config/nvim/plugin-settings/polyglot.vim
 source $HOME/.config/nvim/plugin-settings/fcitx.vim
 source $HOME/.config/nvim/plugin-settings/vim-slime.vim
+source $HOME/.config/nvim/plugin-settings/fzf.vim

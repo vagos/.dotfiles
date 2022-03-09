@@ -5,12 +5,9 @@ set previewer ~/.config/lf/scope.sh
 set ratios 1:2
 set info size:time
 
-cmd setwallpaper ${{
-    bash ~/files/scripts/change_bg.sh $f
+cmd bg ${{
+    change_bg $f
 }}
 
-map bg setwallpaper
-
 map D delete
-
 map . set hidden!
