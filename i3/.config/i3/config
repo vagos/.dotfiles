@@ -90,7 +90,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "main"
 set $ws2 "other"
-set $ws3 "misc"
+# set $ws3 "misc"
 # set $ws4 "4"
 # set $ws5 "5"
 # set $ws6 "6"
@@ -102,7 +102,7 @@ set $ws3 "misc"
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
+# bindsym $mod+3 workspace $ws3
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
