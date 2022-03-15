@@ -113,8 +113,8 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Cozette
-    # family: Inconsolata Nerd Font
+    # family: Cozette
+    family: mononoki Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -299,7 +299,7 @@ colors:
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
-#bell:
+bell:
   # Visual Bell Animation
   #
   # Animation effect for flashing the screen when the visual bell is rung.
@@ -315,14 +315,14 @@ colors:
   #   - EaseOutExpo
   #   - EaseOutCirc
   #   - Linear
-  #animation: EaseOutExpo
+  animation: EaseOutExpo
 
   # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
   # disable the visual bell animation.
-  #duration: 0
+  duration: 0
 
   # Visual bell animation color.
-  #color: '#ffffff'
+  color: '#ffffff'
 
   # Bell Command
   #
@@ -335,7 +335,7 @@ colors:
   #     program: notify-send
   #     args: ["Hello, World!"]
   #
-  #command: None
+  command: None
 
 selection:
   # This string contains all characters that are used as separators for
@@ -417,8 +417,8 @@ mouse:
   # The `double_click` and `triple_click` settings control the time
   # alacritty should wait for accepting multiple clicks as one double
   # or triple click.
-  #double_click: { threshold: 300 }
-  #triple_click: { threshold: 300 }
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false

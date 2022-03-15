@@ -4,8 +4,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 
-export TASKRC=~/.config/task/taskrc
-
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
