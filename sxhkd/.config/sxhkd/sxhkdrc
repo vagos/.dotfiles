@@ -17,3 +17,5 @@ super + Return
     $TERMINAL
 control + alt + b
     change_bg
+super + d
+    dmenu_run -b -i -fn 'Cozette'
