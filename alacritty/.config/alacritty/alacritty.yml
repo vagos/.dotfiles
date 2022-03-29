@@ -40,7 +40,7 @@ scrolling:
 
 font:
   normal:
-    family: Cozette #mononoki Nerd Font
+    family: mononoki Nerd Font # Cozette 
     style: Regular
 
   bold:
@@ -144,10 +144,10 @@ cursor:
 
 live_config_reload: true
 
-shell:
-  program: /bin/bash
-  args:
-    - --login
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - --login
 
 working_directory: None
 alt_send_esc: true
