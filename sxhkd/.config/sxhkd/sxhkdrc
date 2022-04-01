@@ -1,7 +1,7 @@
 XF86MonBrightness{Up,Down} 
     sudo light -{A,U} 10
 XF86Calculator 
-    alacritty -e python
+    $TERMINAL -e python
 XF86Audio{Raise,Lower}Volume 
     pactl set-sink-volume @DEFAULT_SINK@ {+,-}10% 
 XF86AudioMute 
