@@ -1,9 +1,3 @@
-# Exports
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export SDL_IM_MODULE=fcitx
-
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -17,6 +11,7 @@ export KEYTIMEOUT=1
 # Directories
 
 export XDG_MUSIC_DIR="$HOME/files/music"
+export XDG_DOWNLOAD_DIR="$HOME/downloads"
 
 # Add stuff to PATH
 export PATH=$PATH:$HOME/.local/bin:$HOME/files/scripts
