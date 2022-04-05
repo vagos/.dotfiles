@@ -1,5 +1,3 @@
-# $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope.sh"
-
 set previewer ~/.config/lf/scope.sh
 
 set ratios 1:2
@@ -11,3 +9,4 @@ cmd bg ${{
 
 map D delete
 map . set hidden!
+map <enter> open
