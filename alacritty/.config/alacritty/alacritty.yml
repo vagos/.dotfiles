@@ -40,15 +40,15 @@ scrolling:
 
 font:
   normal:
-    family: Cozette # mononoki Nerd Font 
+    family: Cozette
     style: Regular
 
   bold:
-    family: 
+    family: Cozette
     style: Bold
 
   italic:
-    family: 
+    family: Cozette
     style: Italic
 
   bold_italic:
