@@ -36,6 +36,4 @@ filetype on
 filetype indent on
 filetype plugin on
 
-au! BufWritePost $HOME/.config/init.vim source %
-
 colorscheme landscape

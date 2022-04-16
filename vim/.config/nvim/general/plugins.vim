@@ -2,7 +2,10 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Autocompletion Plugin - CoC 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" LSP Server
+Plug 'neovim/nvim-lspconfig'
 
  " Colorschemes
 Plug 'itchyny/landscape.vim'
@@ -43,7 +46,7 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-source $HOME/.config/nvim/plugin-settings/coc.vim
+" source $HOME/.config/nvim/plugin-settings/coc.vim
 source $HOME/.config/nvim/plugin-settings/lightline.vim
 source $HOME/.config/nvim/plugin-settings/vimwiki.vim
 source $HOME/.config/nvim/plugin-settings/vimspector.vim
@@ -51,3 +54,5 @@ source $HOME/.config/nvim/plugin-settings/polyglot.vim
 source $HOME/.config/nvim/plugin-settings/fcitx.vim
 source $HOME/.config/nvim/plugin-settings/vim-slime.vim
 source $HOME/.config/nvim/plugin-settings/fzf.vim
+source $HOME/.config/nvim/plugin-settings/lsp.lua
+
