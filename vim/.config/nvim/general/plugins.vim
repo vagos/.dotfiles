@@ -7,6 +7,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " LSP Server
 Plug 'neovim/nvim-lspconfig'
 
+" Completion 
+Plug 'hrsh7th/nvim-cmp' 
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
  " Colorschemes
 Plug 'itchyny/landscape.vim'
 
@@ -26,6 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 
 " Snippets
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Dev Icons
@@ -34,12 +40,12 @@ Plug 'ryanoasis/vim-devicons'
 " Allignment 
 Plug 'godlygeek/tabular'
 
-" fcitx support 
-Plug 'lilydjwg/fcitx.vim'
-
 " File navigation
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Rooter
+Plug 'airblade/vim-rooter'
 
 " REPL
 " Plug 'jpalardy/vim-slime'
@@ -53,6 +59,6 @@ source $HOME/.config/nvim/plugin-settings/vimspector.vim
 source $HOME/.config/nvim/plugin-settings/polyglot.vim
 source $HOME/.config/nvim/plugin-settings/fcitx.vim
 source $HOME/.config/nvim/plugin-settings/vim-slime.vim
+source $HOME/.config/nvim/plugin-settings/rooter.vim
 source $HOME/.config/nvim/plugin-settings/fzf.vim
 source $HOME/.config/nvim/plugin-settings/lsp.lua
-
