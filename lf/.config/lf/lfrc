@@ -4,7 +4,7 @@ set ratios 1:2
 set info size:time
 
 cmd bg ${{
-    change_bg $f
+    chbg $f
 }}
 
 map D delete
