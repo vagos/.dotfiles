@@ -11,6 +11,11 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp' 
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
  " Colorschemes
 Plug 'itchyny/landscape.vim'
@@ -47,6 +52,12 @@ Plug 'junegunn/fzf.vim'
 " Rooter
 Plug 'airblade/vim-rooter'
 
+" Useful Pair-Binds
+Plug 'tpope/vim-unimpaired'
+
+" Repeat 
+Plug 'tpope/vim-repeat'
+
 " REPL
 " Plug 'jpalardy/vim-slime'
 
@@ -62,3 +73,4 @@ source $HOME/.config/nvim/plugin-settings/vim-slime.vim
 source $HOME/.config/nvim/plugin-settings/rooter.vim
 source $HOME/.config/nvim/plugin-settings/fzf.vim
 source $HOME/.config/nvim/plugin-settings/lsp.lua
+source $HOME/.config/nvim/plugin-settings/treesitter.lua
