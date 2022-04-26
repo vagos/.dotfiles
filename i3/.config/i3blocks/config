@@ -1,5 +1,10 @@
 SCRIPTS=/home/vagozino/.config/i3blocks/scripts
 
+
+[pomodoro]
+command=pomodoro status --format " %R %c/%g "
+interval=60
+
 [ssid]
 command=$SCRIPTS/ssid
 interval=30
@@ -13,11 +18,9 @@ signal=10
 command=$SCRIPTS/disk
 interval=60
 
-[volume-pulseaudio]
-command=$SCRIPTS/volume-pulseaudio
+[volume]
+command=$SCRIPTS/volume
 interval=persist
-SUBSCRIBE=1
-USE_ALSA_NAME=1
 
 [battery]
 command=$SCRIPTS/battery
@@ -31,3 +34,5 @@ interval=50
 STRFTIME_FORMAT=%a %d %b %H:%M
 TZONES=$DEFAULT_TZ,$DEFAULT_TZ
 TZ_LABELS=,
+
+

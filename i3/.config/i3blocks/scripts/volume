@@ -1,0 +1,38 @@
+#!/bin/env bash
+
+AUDIO_HIGH_SYMBOL=${AUDIO_HIGH_SYMBOL:-''}
+
+AUDIO_MED_THRESH=${AUDIO_MED_THRESH:-50}
+AUDIO_MED_SYMBOL=${AUDIO_MED_SYMBOL:-''}
+
+AUDIO_LOW_THRESH=${AUDIO_LOW_THRESH:-0}
+AUDIO_LOW_SYMBOL=${AUDIO_LOW_SYMBOL:-''}
+
+AUDIO_MUTED_SYMBOL=${AUDIO_MUTED_SYMBOL:-'婢'}
+
+SINK="@DEFAULT_SINK@"
+
+get_volume()
+{
+
+    VOL=$(pactl get-sink-volume $SINK | grep -oP '\d+%' | head -n 1 | grep -oP '\d+')
+
+    MUTED=$(pactl get-sink-mute $SINK)
+
+    if [[ $MUTED =~ "no" ]] ; then
+        SYMB=$AUDIO_HIGH_SYMBOL
+        [[ $VOL -le $AUDIO_MED_THRESH ]] && SYMB=$AUDIO_MED_SYMBOL
+        [[ $VOL -le $AUDIO_LOW_THRESH ]] && SYMB=$AUDIO_LOW_SYMBOL
+        COLOR=$DEFAULT_COLOR
+    else
+        SYMB=$AUDIO_MUTED_SYMBOL
+        COLOR=$MUTED_COLOR
+    fi
+
+    echo $SYMB $VOL%
+}
+
+while read -r event; do
+    get_volume
+done < <(pactl subscribe | stdbuf -oL grep change)
+

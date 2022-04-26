@@ -55,7 +55,7 @@ if (!exists $display_map{$ENV{TZ}}) {
 }
 $tz_display = $display_map{$ENV{TZ}};
 
-binmode(STDOUT, ":utf-8");
+# binmode(STDOUT, ":utf-8");
 my $time = strftime($format, localtime());
 if ($tz_display) {
     print "∞ $time\n";
