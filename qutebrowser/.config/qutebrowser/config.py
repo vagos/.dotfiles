@@ -3,6 +3,7 @@ config.load_autoconfig()
 c.url.start_pages = ["~/"]
 
 c.url.searchengines["yt"] = "https://www.youtube.com/results?search_query={}"
+c.url.searchengines["aw"] = "https://wiki.archlinux.org/index.php?search={}"
 c.url.searchengines["DEFAULT"] = "https://www.google.com/search?q={}"
 
 c.content.fullscreen.window = True
