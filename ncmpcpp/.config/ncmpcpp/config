@@ -319,7 +319,7 @@ song_columns_list_format ="(25)[cyan]{a} (40)[green]{t|f} (30)[red]{b} (1)[magen
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-execute_on_song_change = pkill -SIGRTMIN+10 i3blocks
+execute_on_song_change = on-song-change
 #
 ##
 ## Note: Custom command that will be executed each time player state
