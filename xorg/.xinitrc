@@ -1,8 +1,8 @@
-mopidy & # Start up music
-picom  & # Start compositor
-sxhkd  & # Start hotkey daemon
+mopidy & # music
+picom  & # compositor
+sxhkd  & # hotkey daemon
+dunst  & # notifications
 
-# Set CAPS to ESC
 setxkbmap -option caps:escape 
 setxkbmap -model pc105 -layout us,gr -variant qwerty -option grp:lctrl_lwin_toggle
 
