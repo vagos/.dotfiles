@@ -36,4 +36,6 @@ filetype on
 filetype indent on
 filetype plugin on
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 colorscheme landscape
