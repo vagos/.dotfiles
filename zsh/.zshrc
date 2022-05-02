@@ -32,6 +32,7 @@ bindkey "^[[1;5D" backward-word
 # Aliases
 alias ls='ls --color=auto'
 alias lf='lfcd'
+alias ll='ls -l'
 
 # Plugins
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
