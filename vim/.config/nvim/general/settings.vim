@@ -38,4 +38,6 @@ filetype plugin on
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+set pumheight=4
+
 colorscheme landscape

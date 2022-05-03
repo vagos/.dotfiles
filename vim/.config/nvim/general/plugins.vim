@@ -15,7 +15,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
 " Treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
  " Colorschemes
 Plug 'itchyny/landscape.vim'
@@ -73,4 +73,4 @@ source $HOME/.config/nvim/plugin-settings/vim-slime.vim
 source $HOME/.config/nvim/plugin-settings/rooter.vim
 source $HOME/.config/nvim/plugin-settings/fzf.vim
 source $HOME/.config/nvim/plugin-settings/lsp.lua
-source $HOME/.config/nvim/plugin-settings/treesitter.lua
+" source $HOME/.config/nvim/plugin-settings/treesitter.lua
