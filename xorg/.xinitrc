@@ -10,6 +10,6 @@ setxkbmap -model pc105 -layout us,gr -variant qwerty -option grp:lctrl_lwin_togg
 xset s off 
 xset -dpms
 
-xflux -l 40.5147, 21.6786 
+redshift -l 40.5147:21.6786 
 
 exec i3 # Start window manager
