@@ -11,6 +11,8 @@ vmap > >gv
 nnoremap n nzz
 nnoremap N Nzz
 
+noremap Q !!sh<CR>
+
 " Spell Check
 
 set spelllang=en,el
