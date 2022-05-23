@@ -1,7 +1,8 @@
-# i3 config file (v4)
+# i4 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id chbg
+exec --no-startup-id redshift -l 40.5147:21.6786
 
 set $mod Mod4
 
@@ -14,9 +15,6 @@ set $refresh_i3status killall -SIGUSR1 i3status
 
 # Back and Forth Workspaces
 bindsym $mod+Tab workspace next
-
-# Switch audio output
-bindsym $mod+m exec switch-output
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
