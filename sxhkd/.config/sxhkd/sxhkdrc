@@ -12,7 +12,7 @@ XF86AudioPlay
     mpc toggle # && pkill -SIGRTMIN+10 i3blocks
 
 super + Print
-    maim -s "$HOME/files/screenshots/$(xwininfo -id $(xdotool getactivewindow) | grep -oP 'xwininfo:.+ \K".*"' | tr -d '"')_$(date +%s).png"
+    screenshot
 super + Return
     $TERMINAL
 control + alt + b

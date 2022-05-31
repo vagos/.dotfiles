@@ -34,6 +34,8 @@ alias ls='ls --color=auto'
 alias lf='lfcd'
 alias ll='ls -l'
 
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
 # Plugins
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
