@@ -17,7 +17,7 @@ SAVEHIST=100
 HISTFILE=$HOME/.cache/zsh/history
 
 autoload -U colors && colors
-PROMPT='%F{blue}[🦍 %1~]$%f '
+PROMPT='%F{blue}[🐒 %1~]$%f '
 
 # Activate vim mode with <Escape>
 set -o vi
@@ -33,6 +33,8 @@ bindkey "^[[1;5D" backward-word
 alias ls='ls --color=auto'
 alias lf='lfcd'
 alias ll='ls -l'
+
+eval "$(zoxide init zsh)"
 
 # Plugins
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
