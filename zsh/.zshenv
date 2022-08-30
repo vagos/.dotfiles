@@ -16,3 +16,6 @@ export XDG_DOWNLOAD_DIR="$HOME/downloads"
 # Add stuff to PATH
 export PATH=$PATH:$HOME/.local/bin:$HOME/files/scripts
 export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin
+export PATH=$PATH:/root/.gem/ruby/3.0.0/bin
+export PATH=$PATH:$HOME/.cargo/bin
