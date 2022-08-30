@@ -18,3 +18,5 @@ config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 
 config.bind(',m', 'hint links spawn mpv {hint-url}')
+
+c.editor.command=['alacritty','-e','nvim', '{file}']
