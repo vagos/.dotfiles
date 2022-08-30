@@ -8,8 +8,8 @@ nnoremap <silent> <esc> :noh<cr>
 vmap < <gv
 vmap > >gv
 
-nnoremap n nzz
-nnoremap N Nzz
+" nnoremap n nzz
+" nnoremap N Nzz
 
 noremap Q !!sh<CR>
 

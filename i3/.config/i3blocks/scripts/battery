@@ -5,5 +5,5 @@ BTR_DVC_FLDR="/sys/class/power_supply"
 
 for battery in $BTR_DVC_FLDR/BAT*; do 
     CAPACITY=$(cat $battery/capacity)
-    [$(cat $battery/status) != "Unknown" ] && echo  $CAPACITY% $(cat $battery/status)
+    [[ $(cat $battery/status) != "Unknown" ]] && echo  $CAPACITY% $(cat $battery/status)
 done
