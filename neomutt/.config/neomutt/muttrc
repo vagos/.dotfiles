@@ -110,13 +110,14 @@ set sidebar_short_path = yes
 set sidebar_next_new_wrap = yes
 set mail_check_stats
 set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
-bind index,pager \Ck sidebar-prev
-bind index,pager \Cj sidebar-next
+
+bind index,pager \CU noop
+bind index,pager \CD noop
 bind index,pager \Ck sidebar-prev
 bind index,pager \Cj sidebar-next
 bind index,pager \Co sidebar-open
-bind index,pager \Cp sidebar-prev-new
-bind index,pager \Cn sidebar-next-new
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
 bind index,pager B sidebar-toggle-visible
 
 # Default index colors:
@@ -201,9 +202,9 @@ color body red default "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-
 
 # ==== vagozino Account ==== 
 
-# source "~/.config/mutt/accounts/vagozino_gmail"
-# folder-hook $folder 'source ~/.config/mutt/accounts/vagozino_gmail'
+# source "~/.config/neomutt/accounts/vagozino_gmail"
+# folder-hook $folder 'source ~/.config/neomutt/accounts/vagozino_gmail'
 
 # === e.lambrou Account ====
-source "~/.config/mutt/accounts/evangelos_upnet"
-folder-hook $folder 'source ~/.config/mutt/accounts/evangelos_upnet'
+source "~/.config/neomutt/accounts/evangelos_upnet"
+folder-hook $folder 'source ~/.config/neomutt/accounts/evangelos_upnet'
