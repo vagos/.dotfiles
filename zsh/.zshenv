@@ -12,6 +12,7 @@ export KEYTIMEOUT=1
 
 export XDG_MUSIC_DIR="$HOME/files/music"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 # Add stuff to PATH
 export PATH=$PATH:$HOME/.local/bin:$HOME/files/scripts
