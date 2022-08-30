@@ -17,6 +17,10 @@ Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 " Treesitter
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" ASCII drawing
+Plug 'gyim/vim-boxdraw'
+Plug 'jbyuki/venn.nvim'
+
  " Colorschemes
 Plug 'itchyny/landscape.vim'
 
@@ -57,6 +61,9 @@ Plug 'tpope/vim-unimpaired'
 
 " Repeat 
 Plug 'tpope/vim-repeat'
+
+" Motions
+Plug 'justinmk/vim-sneak'
 
 " REPL
 " Plug 'jpalardy/vim-slime'
