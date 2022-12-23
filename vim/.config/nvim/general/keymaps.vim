@@ -15,6 +15,6 @@ noremap Q !!sh<CR>
 
 " Spell Check
 
-set spelllang=en,el
+set spelllang=en,el,engr
 
 nnoremap <silent> <F6> :set spell!<cr>

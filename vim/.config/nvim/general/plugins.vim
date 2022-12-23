@@ -1,21 +1,47 @@
 " Vim Plug
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+" LSP Support
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
+" Autocompletion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
+
+"  Snippets
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
+
+Plug 'VonHeikemen/lsp-zero.nvim'
+
 " Autocompletion Plugin - CoC 
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " LSP Server
-Plug 'neovim/nvim-lspconfig'
+"" Plug 'neovim/nvim-lspconfig'
 
 " Completion 
-Plug 'hrsh7th/nvim-cmp' 
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+"" Plug 'hrsh7th/nvim-cmp' 
+"" Plug 'hrsh7th/cmp-nvim-lsp'
+"" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+"" Plug 'hrsh7th/cmp-path'
+"" Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+
+" Snippets
+"" Plug 'SirVer/ultisnips'
+"" Plug 'honza/vim-snippets'
+
+" Polyglot
+"" Plug 'sheerun/vim-polyglot'
 
 " Treesitter
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " ASCII drawing
 Plug 'gyim/vim-boxdraw'
@@ -35,13 +61,6 @@ Plug 'itchyny/lightline.vim'
 
 " Surround stuff
 Plug 'tpope/vim-surround'
-
-" Polyglot
-Plug 'sheerun/vim-polyglot'
-
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 " Dev Icons
 Plug 'ryanoasis/vim-devicons'
@@ -66,7 +85,11 @@ Plug 'tpope/vim-repeat'
 Plug 'justinmk/vim-sneak'
 
 " REPL
-" Plug 'jpalardy/vim-slime'
+Plug 'jpalardy/vim-slime'
+
+" Copilot
+" Plug 'github/copilot.vim'
+
 
 call plug#end()
 
@@ -74,10 +97,11 @@ call plug#end()
 source $HOME/.config/nvim/plugin-settings/lightline.vim
 source $HOME/.config/nvim/plugin-settings/vimwiki.vim
 source $HOME/.config/nvim/plugin-settings/vimspector.vim
-source $HOME/.config/nvim/plugin-settings/polyglot.vim
 source $HOME/.config/nvim/plugin-settings/fcitx.vim
 source $HOME/.config/nvim/plugin-settings/vim-slime.vim
 source $HOME/.config/nvim/plugin-settings/rooter.vim
 source $HOME/.config/nvim/plugin-settings/fzf.vim
 source $HOME/.config/nvim/plugin-settings/lsp.lua
+" source $HOME/.config/nvim/plugin-settings/polyglot.vim
+source $HOME/.config/nvim/plugin-settings/copilot.vim
 " source $HOME/.config/nvim/plugin-settings/treesitter.lua
