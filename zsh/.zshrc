@@ -33,9 +33,11 @@ bindkey "^[[1;5D" backward-word
 alias ls='ls --color=auto'
 alias lf='lfcd'
 alias ll='ls -l'
+alias vim='nvim'
 
 eval "$(zoxide init zsh)"
 
 # Plugins
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/zsh/plugins/zsh-sd/sd.plugin.zsh

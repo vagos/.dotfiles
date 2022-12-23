@@ -6,6 +6,8 @@ export EDITOR=nvim
 export BROWSER=xdg-open
 export MANPAGER="nvim +Man!"
 
+export SD_ROOT=$HOME/files/scripts
+
 export KEYTIMEOUT=1
 
 # Directories
