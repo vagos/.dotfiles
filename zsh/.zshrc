@@ -17,7 +17,12 @@ SAVEHIST=100
 HISTFILE=$HOME/.cache/zsh/history
 
 autoload -U colors && colors
-PROMPT='%F{blue}[🐒 %1~]$%f '
+
+PROMPT_ICON='🐧'
+[[ $(hostname) == "desktop" ]] && PROMPT_ICON='🦍'
+[[ $(hostname) == "laptop" ]] && PROMPT_ICON='🐒'
+
+PROMPT="%F{blue}[${PROMPT_ICON} %1~]$%f "
 
 # Activate vim mode with <Escape>
 set -o vi
