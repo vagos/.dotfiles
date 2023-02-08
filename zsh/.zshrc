@@ -40,4 +40,4 @@ eval "$(zoxide init zsh)"
 # Plugins
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /usr/share/zsh/plugins/zsh-sd/sd.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-sd/sd.plugin.zsh
