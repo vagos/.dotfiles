@@ -20,32 +20,8 @@ Plug 'rafamadriz/friendly-snippets'
 
 Plug 'VonHeikemen/lsp-zero.nvim'
 
-" Autocompletion Plugin - CoC 
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" LSP Server
-"" Plug 'neovim/nvim-lspconfig'
-
-" Completion 
-"" Plug 'hrsh7th/nvim-cmp' 
-"" Plug 'hrsh7th/cmp-nvim-lsp'
-"" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-"" Plug 'hrsh7th/cmp-path'
-"" Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
-
-" Snippets
-"" Plug 'SirVer/ultisnips'
-"" Plug 'honza/vim-snippets'
-
-" Polyglot
-"" Plug 'sheerun/vim-polyglot'
-
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" ASCII drawing
-Plug 'gyim/vim-boxdraw'
-Plug 'jbyuki/venn.nvim'
 
  " Colorschemes
 Plug 'itchyny/landscape.vim'
@@ -73,7 +49,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Rooter
-Plug 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 
 " Useful Pair-Binds
 Plug 'tpope/vim-unimpaired'
@@ -87,13 +63,18 @@ Plug 'justinmk/vim-sneak'
 " REPL
 Plug 'jpalardy/vim-slime'
 
-" Copilot
-" Plug 'github/copilot.vim'
+" Transparent Background
+Plug 'xiyaowong/nvim-transparent'
 
+" Copilot
+Plug 'github/copilot.vim'
+
+" Fun (ascii drawing)
+Plug 'gyim/vim-boxdraw'
+Plug 'jbyuki/venn.nvim'
 
 call plug#end()
 
-" source $HOME/.config/nvim/plugin-settings/coc.vim
 source $HOME/.config/nvim/plugin-settings/lightline.vim
 source $HOME/.config/nvim/plugin-settings/vimwiki.vim
 source $HOME/.config/nvim/plugin-settings/vimspector.vim
@@ -102,6 +83,7 @@ source $HOME/.config/nvim/plugin-settings/vim-slime.vim
 source $HOME/.config/nvim/plugin-settings/rooter.vim
 source $HOME/.config/nvim/plugin-settings/fzf.vim
 source $HOME/.config/nvim/plugin-settings/lsp.lua
-" source $HOME/.config/nvim/plugin-settings/polyglot.vim
 source $HOME/.config/nvim/plugin-settings/copilot.vim
-" source $HOME/.config/nvim/plugin-settings/treesitter.lua
+source $HOME/.config/nvim/plugin-settings/treesitter.lua
+source $HOME/.config/nvim/plugin-settings/appearance.lua
+" source $HOME/.config/nvim/plugin-settings/polyglot.vim
