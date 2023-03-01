@@ -2,7 +2,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id chbg
-exec --no-startup-id redshift -l 40.5147:21.6786
+# exec --no-startup-id redshift -l 40.5147:21.6786
 
 #Needed for i3-gaps
 #hide_edge_borders both

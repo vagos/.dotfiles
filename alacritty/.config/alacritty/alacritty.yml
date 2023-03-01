@@ -32,8 +32,6 @@ window:
     instance: Terminal
     general: Terminal
 
-  gtk_theme_variant: None
-
 scrolling:
   history: 10000
   multiplier: 1
@@ -52,7 +50,7 @@ font:
     style: Italic
 
   bold_italic:
-    family:
+    family: Cozette
     style: Bold Italic
 
   size: 8.5

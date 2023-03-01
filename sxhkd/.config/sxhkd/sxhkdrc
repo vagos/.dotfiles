@@ -3,13 +3,13 @@ XF86MonBrightness{Up,Down}
 XF86Calculator 
     $TERMINAL -e python
 XF86Audio{Raise,Lower}Volume 
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}10% 
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}5% 
 XF86AudioMute 
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 XF86AudioMicMute 
     pactl set-source-mute @DEFAULT_SOURCE@ toggle
 XF86AudioPlay 
-    mpc toggle # && pkill -SIGRTMIN+10 i3blocks
+    mpc toggle
 
 super + Print
     screenshot
@@ -18,4 +18,4 @@ super + Return
 control + alt + b
     chbg
 super + d
-    dmenu_run -b -i
+    dmenu_run -i
