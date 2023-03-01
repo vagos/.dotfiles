@@ -2,6 +2,7 @@ mopidy    & # music
 picom     & # compositor
 sxhkd     & # hotkey daemon
 dunst     & # notifications
+xbanish   & # hide mouse cursor
 
 setxkbmap -option caps:escape 
 setxkbmap -model pc105 -layout us,gr -variant qwerty -option grp:lctrl_lwin_toggle
