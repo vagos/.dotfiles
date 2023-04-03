@@ -154,6 +154,16 @@
 ##  - load
 ##
 #
+
+def_key "g"
+  move_home
+def_key "G"
+  move_end
+def_key "n"
+    next_found_item
+def_key "N"
+    previous_found_item
+
 #def_key "mouse"
 #  mouse_event
 #
@@ -237,8 +247,8 @@
 #def_key "right"
 #  volume_up
 #
-def_key "+"
-  show_clock
+#def_key "+"
+#  volume_up
 #
 #def_key "left"
 #  previous_column
@@ -269,32 +279,36 @@ def_key "+"
 #
 #def_key "2"
 #  show_browser
-def_key "2"
-   show_search_engine
-
-def_key "2"
-   reset_search_engine
-
-def_key "4"
-  show_browser
-
-def_key "3"
-  show_playlist_editor
-
-def_key "5"
-  show_visualizer
-
-def_key "6"
-  dummy 
 #
-def_key "7"
-  dummy
+#def_key "2"
+#  change_browse_mode
 #
-def_key "8"
-  dummy
+#def_key "3"
+#  show_search_engine
 #
-def_key "="
- volume_up
+#def_key "3"
+#  reset_search_engine
+#
+#def_key "4"
+#  show_media_library
+#
+#def_key "4"
+#  toggle_media_library_columns_mode
+#
+#def_key "5"
+#  show_playlist_editor
+#
+#def_key "6"
+#  show_tag_editor
+#
+#def_key "7"
+#  show_outputs
+#
+#def_key "8"
+#  show_visualizer
+#
+#def_key "="
+#  show_clock
 #
 #def_key "@"
 #  show_server_info
@@ -437,16 +451,9 @@ def_key "="
 #def_key "I"
 #  show_artist_info
 #
-
-def_key "g"
-  move_home
-def_key "G"
-  move_end
-def_key "n"
-    next_found_item
-def_key "N"
-    previous_found_item
-
+#def_key "g"
+#  jump_to_position_in_song
+#
 #def_key "l"
 #  show_lyrics
 #
@@ -549,6 +556,6 @@ def_key "N"
 #def_key "ctrl-p"
 #  set_selected_items_priority
 #
-def_key "q"
-  quit
-
+#def_key "q"
+#  quit
+#

@@ -395,9 +395,9 @@ header_visibility = no
 #statusbar_visibility = yes
 #
 ## Show the "Connected to ..." message on startup
-connected_message_on_startup = no 
+connected_message_on_startup = yes
 #
-titles_visibility = no 
+titles_visibility = yes
 #
 #header_text_scrolling = yes
 #
