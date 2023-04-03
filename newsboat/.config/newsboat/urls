@@ -2,7 +2,6 @@ https://lukesmith.xyz/rss.xml
 https://www.huniepot.com/rss news game
 https://sbox.facepunch.com/rss/news news
 https://internalpointers.com/rss 
-https://projecteuler.net/rss2_euler.xml
 https://landchad.net/rss.xml 
 https://based.cooking/rss.xml 
 https://www.lua.org/news.rss news
@@ -20,8 +19,6 @@ https://dpc.pw/feed/
 http://blog.cleancoder.com/atom.xml 
 https://thevaluable.dev/index.xml 
 http://osblog.stephenmarz.com/feed.rss 
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA youtube
-https://www.youtube.com/feeds/videos.xml?channel_id=UCAYKj_peyESIMDp5LtHlH2A youtube
 http://blog.notfoss.com/rss.xml dev
 https://www.netmeister.org/blog/rss.xml dev
 https://archlinux.org/feeds/news/ news
@@ -33,3 +30,4 @@ https://tratt.net/laurie/blog/blog.rss
 https://gideonwolfe.com/index.xml
 https://alexwlchan.net/atom.xml
 https://matt.might.net/articles/feed.rss
+https://nullprogram.com/feed/
