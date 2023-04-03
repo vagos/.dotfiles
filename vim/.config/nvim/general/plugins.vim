@@ -49,7 +49,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Rooter
-" Plug 'airblade/vim-rooter'
+Plug 'airblade/vim-rooter'
 
 " Useful Pair-Binds
 Plug 'tpope/vim-unimpaired'
