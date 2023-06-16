@@ -25,6 +25,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
  " Colorschemes
 Plug 'itchyny/landscape.vim'
+Plug 'folke/tokyonight.nvim'
+Plug 'RRethy/nvim-base16'
 
 " Colorize colors in text.
 Plug 'chrisbra/colorizer'
@@ -69,21 +71,24 @@ Plug 'xiyaowong/nvim-transparent'
 " Copilot
 Plug 'github/copilot.vim'
 
+" Hex File editing
+Plug 'rootkiter/vim-hexedit'
+
 " Fun (ascii drawing)
 Plug 'gyim/vim-boxdraw'
 Plug 'jbyuki/venn.nvim'
 
 call plug#end()
 
-source $HOME/.config/nvim/plugin-settings/lightline.vim
-source $HOME/.config/nvim/plugin-settings/vimwiki.vim
-source $HOME/.config/nvim/plugin-settings/vimspector.vim
-source $HOME/.config/nvim/plugin-settings/fcitx.vim
-source $HOME/.config/nvim/plugin-settings/vim-slime.vim
-source $HOME/.config/nvim/plugin-settings/rooter.vim
-source $HOME/.config/nvim/plugin-settings/fzf.vim
-source $HOME/.config/nvim/plugin-settings/lsp.lua
-source $HOME/.config/nvim/plugin-settings/copilot.vim
-source $HOME/.config/nvim/plugin-settings/treesitter.lua
-source $HOME/.config/nvim/plugin-settings/appearance.lua
-" source $HOME/.config/nvim/plugin-settings/polyglot.vim
+source $HOME/.config/nvim/plugin/lightline.vim
+source $HOME/.config/nvim/plugin/vimwiki.vim
+source $HOME/.config/nvim/plugin/vimspector.vim
+source $HOME/.config/nvim/plugin/fcitx.vim
+source $HOME/.config/nvim/plugin/vim-slime.vim
+source $HOME/.config/nvim/plugin/rooter.vim
+source $HOME/.config/nvim/plugin/fzf.vim
+source $HOME/.config/nvim/plugin/lsp.lua
+source $HOME/.config/nvim/plugin/copilot.vim
+source $HOME/.config/nvim/plugin/treesitter.lua
+source $HOME/.config/nvim/plugin/appearance.lua
+" source $HOME/.config/nvim/plugin/polyglot.vim
