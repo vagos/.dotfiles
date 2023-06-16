@@ -1,3 +1,7 @@
 vim/.config/nvim/autoload/plugged/*
+ncmpcpp/.config/ncmpcpp/.lyrics
+
 **/bookmarks
 **/quickmarks
+
+*.log
