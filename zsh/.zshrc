@@ -36,6 +36,7 @@ bindkey "^[[1;5D" backward-word
 
 # Aliases
 alias ls='ls --color=auto'
+alias mv='mv -i'
 alias lf='lfcd'
 alias ll='ls -l'
 alias vim='nvim'
