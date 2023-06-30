@@ -35,10 +35,15 @@ bindkey "^[[1;5D" backward-word
 # bindkey -x '"\C-l": clear'
 
 # Aliases
+alias less='less -r'
+alias rg='rg --color=always'
+
 alias ls='ls --color=auto'
 alias lf='lfcd'
 alias ll='ls -l'
+alias tm='tmux'
 alias vim='nvim'
+alias vi='vim'
 
 eval "$(zoxide init zsh)"
 
