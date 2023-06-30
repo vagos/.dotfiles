@@ -39,6 +39,7 @@ alias less='less -r'
 alias rg='rg --color=always'
 
 alias ls='ls --color=auto'
+alias mv='mv -i'
 alias lf='lfcd'
 alias ll='ls -l'
 alias tm='tmux'
