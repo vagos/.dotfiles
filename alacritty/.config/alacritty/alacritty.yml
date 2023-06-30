@@ -44,7 +44,7 @@ font:
     family: CozetteVector
     style: Bold
   bold_italic:
-    family: Cozette
+    family: CozetteVector
     style: Bold Italic
   glyph_offset:
     x: 0
