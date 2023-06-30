@@ -3,6 +3,8 @@
 
 BTR_DVC_FLDR="/sys/class/power_supply"
 
+[[ -z "$(ls -A $BTR_DVC_FLDR)" ]] && exit
+
 for battery in $BTR_DVC_FLDR/BAT*; do 
     CAPACITY=$(cat $battery/capacity)
     [[ $(cat $battery/status) != "Unknown" ]] && echo  $CAPACITY% $(cat $battery/status)

@@ -7,6 +7,7 @@ export BROWSER=xdg-open
 export MANPAGER="nvim +Man!"
 
 export SD_ROOT=$HOME/bin
+export FZF_DEFAULT_COMMAND='find .'
 
 export KEYTIMEOUT=1
 
@@ -22,6 +23,10 @@ export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
 export PATH=$PATH:$HOME/.gem/ruby/3.0.0/bin
 export PATH=$PATH:/root/.gem/ruby/3.0.0/bin
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:/var/lib/snapd/snap/bin
 
-export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/lib64/jvm/java-11-openjdk-11/lib/server/libjvm.so:$LD_LIBRARY_PATH
+
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
