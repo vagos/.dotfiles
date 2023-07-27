@@ -3,9 +3,12 @@ local cmp = require('cmp')
 
 lsp.preset('recommended')
 
+lsp.ensure_installed({ })
+lsp.skip_server_setup({'ltex'})
+
 lsp.set_preferences({
   suggest_lsp_servers = true,
-  setup_servers_on_start = true,
+  setup_servers_on_start = false,
   set_lsp_keymaps = true,
   configure_diagnostics = true,
   cmp_capabilities = true,
@@ -14,14 +17,6 @@ lsp.set_preferences({
   sign_icons = { }
 })
 
-
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'rust_analyzer',
-  'clangd',
-  'texlab'
-})
 
 lsp.setup()
 
@@ -36,7 +31,7 @@ vim.diagnostic.config({
   float = {
       focusable = false,
       style = 'minimal',
-      border = 'none',
+      border = 'single',
       source = 'always',
       header = '',
       prefix = '',
@@ -45,7 +40,7 @@ vim.diagnostic.config({
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
     vim.lsp.handlers.hover, {
-     border = "single",
+         border = "single",
     }
 )
 
@@ -59,7 +54,15 @@ cmp.setup({
             border = "none"
         }),
         documentation = cmp.config.window.bordered({
-            border = "none"
+            border = "single"
         })
+    },
+
+    sources = {
+        { name = "nvim_lsp" },
+        { name = "buffer" },
+        { name = "path" },
+        { name = "luasnip" },
+        { name = "nvim_lsp_signature_help" },
     }
 })
