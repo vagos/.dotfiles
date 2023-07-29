@@ -3,12 +3,11 @@ local cmp = require('cmp')
 
 lsp.preset('recommended')
 
-lsp.ensure_installed({ })
-lsp.skip_server_setup({'ltex'})
+-- lsp.skip_server_setup({'ltex'})
 
 lsp.set_preferences({
   suggest_lsp_servers = true,
-  setup_servers_on_start = false,
+  setup_servers_on_start = true,
   set_lsp_keymaps = true,
   configure_diagnostics = true,
   cmp_capabilities = true,
@@ -57,6 +56,14 @@ cmp.setup({
             border = "single"
         })
     },
+
+    mapping = cmp.mapping.preset.insert({
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    }),
 
     sources = {
         { name = "nvim_lsp" },
