@@ -5,6 +5,7 @@ export TERMINAL=alacritty
 export EDITOR=nvim
 export BROWSER=xdg-open
 export MANPAGER="nvim +Man!"
+export TERM="xterm-256color"
 
 export SD_ROOT=$HOME/bin
 export FZF_DEFAULT_COMMAND='find .'
