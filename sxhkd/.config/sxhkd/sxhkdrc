@@ -12,7 +12,10 @@ XF86AudioPlay
     mpc toggle
 
 super + Print
-    screenshot
+    screenshot screen
+super + alt + Print
+    screenshot window
+
 super + Return
     $TERMINAL
 control + alt + b
