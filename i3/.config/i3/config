@@ -2,7 +2,10 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id chbg
-# exec --no-startup-id redshift -l 40.5147:21.6786
+# exec_always --no-startup-id startup.sh
+# for_window [title="^start:"] move scratchpad
+
+exec --no-startup-id redshift -l 40.5147:21.6786
 
 #Needed for i3-gaps
 #hide_edge_borders both
@@ -80,23 +83,28 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:main"
-set $ws2 "2:other"
-set $ws3 "3:misc"
+set $ws2 "2:learn"
+set $ws3 "3:work"
+set $ws4 "4:fun"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+k exec "i3-msg exit"
+# lock screen
+bindsym $mod+l exec "scrn-lock"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -124,9 +132,9 @@ for_window [class="matplotlib"] floating enable
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	status_command i3blocks
-	tray_output none
-	separator_symbol "::" 
+    status_command i3blocks
+    tray_output none
+    separator_symbol "::" 
     strip_workspace_numbers yes
     position top
 
