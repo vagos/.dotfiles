@@ -12,7 +12,6 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
 set conceallevel=0                      " So that I can see `` in markdown files
-set tabstop=4                           " Insert 2 spaces for a tab
 set shiftwidth=4                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set expandtab                           " Converts tabs to spaces
@@ -31,6 +30,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set autochdir                           " Your working directory will always be the same as your working directory
 set noswapfile                          " No more swap files 
 set ignorecase
+set shell=/bin/zsh
 
 filetype on
 filetype indent on
@@ -39,3 +39,7 @@ filetype plugin on
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set pumheight=4
+
+if has('termguicolors')
+  set termguicolors
+endif
