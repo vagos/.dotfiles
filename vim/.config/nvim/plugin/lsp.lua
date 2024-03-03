@@ -16,6 +16,39 @@ lsp.set_preferences({
   sign_icons = { }
 })
 
+require('lspconfig').tsserver.setup({
+    init_options = {
+        preferences = {
+            disableSuggestions = true,
+        },
+    },
+})
+
+require('lspconfig').pylsp.setup({
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    ignore = { "E501" },
+                    maxLineLength = 120
+                }
+            }
+        }
+    }
+})
+
+-- Disable the E501 error for python
+require('lspconfig').pyright.setup({
+  settings = {
+    python = {
+      analysis = {
+        errors = {
+          E501 = false
+        }
+      }
+    }
+  }
+})
 
 lsp.setup()
 
@@ -72,4 +105,16 @@ cmp.setup({
         { name = "luasnip" },
         { name = "nvim_lsp_signature_help" },
     }
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
+  command = 'silent! EslintFixAll',
+  group = vim.api.nvim_create_augroup('MyAutocmdsJavaScripFormatting', {}),
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = { '*.py' },
+  command = 'silent! LspZeroFormat',
+  group = vim.api.nvim_create_augroup('MyAutocmdsPythonFormatting', {}),
 })
