@@ -35,4 +35,3 @@ get_volume()
 while read -r event; do
     get_volume
 done < <(pactl subscribe | stdbuf -oL grep change)
-

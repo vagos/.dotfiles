@@ -1,12 +1,8 @@
 SCRIPTS=/home/vagozino/.config/i3blocks/scripts
 
-[pomodoro]
-command=sd pomodoro status
+[task]
+command=$SCRIPTS/task
 interval=1
-
-[ssid]
-command=$SCRIPTS/ssid
-interval=30
 
 [disk]
 command=$SCRIPTS/disk

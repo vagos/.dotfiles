@@ -1,0 +1,5 @@
+#!/bin/bash
+
+TASK=$(task export active | jq '.[] | .description')
+[[ -z $TASK ]] && exit 1
+echo "☺ $TASK"
