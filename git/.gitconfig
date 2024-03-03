@@ -1,5 +1,14 @@
 [user]
 	email = vagos@lamprou.xyz
 	name = Evangelos Lamprou
+	signingkey = ~/.ssh/git.pub
 [init]
 	defaultBranch = main
+[alias]
+	staash = stash --all
+[rerere]
+	enabled = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
