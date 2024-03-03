@@ -1,3 +1,5 @@
 [user]
-	email = e.lamprou@upnet.gr
-	name = Evangelos Labrou
+	email = vagos@lamprou.xyz
+	name = Evangelos Lamprou
+[init]
+	defaultBranch = main
