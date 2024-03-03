@@ -6,3 +6,6 @@
 task/.config/task/certs
 vim/.config/nvim/autoload/plugged/*
 ncmpcpp/.config/ncmpcpp/.lyrics
+qutebrowser/.config/qutebrowser/qsettings
+qutebrowser/.config/qutebrowser/autoconfig.yml
+irssi/.irssi/otr
