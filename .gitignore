@@ -1,7 +1,8 @@
-vim/.config/nvim/autoload/plugged/*
-ncmpcpp/.config/ncmpcpp/.lyrics
-
 **/bookmarks
 **/quickmarks
 
+# uninteresting files/folders
 *.log
+task/.config/task/certs
+vim/.config/nvim/autoload/plugged/*
+ncmpcpp/.config/ncmpcpp/.lyrics
