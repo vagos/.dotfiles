@@ -1,2 +1,9 @@
-vim.cmd('colorscheme base16-gruvbox-dark-pale')
+local theme = os.getenv("SYSTEM_THEME")
+
+if theme == "light" then
+  vim.cmd('colorscheme paper')
+else
+  vim.cmd('colorscheme landscape')
+end
+
 require("transparent").setup({ }) 
