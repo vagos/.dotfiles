@@ -71,6 +71,16 @@ servers = (
     use_tls = "no";
     tls_verify = "no";
     autoconnect = "yes";
+    starttls = "yes";
+  },
+  {
+    address = "irc.libera.chat";
+    chatnet = "Libera";
+    port = "6667";
+    use_tls = "no";
+    tls_verify = "no";
+    autoconnect = "yes";
+    starttls = "yes";
   }
 );
 
@@ -160,7 +170,7 @@ channels = (
   { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
   { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
-  { name = "#archlinux"; chatnet = "Libera"; autojoin = "yes"; }
+  { name = "#archlinux"; chatnet = "Libera"; autojoin = "yes"; },
   { name = "#4chan"; chatnet = "Rizon"; autojoin = "yes"; }
 );
 
@@ -324,9 +334,7 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
 };
-hilights = (
-  { text = "nick"; nick = "yes"; word = "yes"; }
-);
+hilights = ( { text = "nick"; nick = "yes"; word = "yes"; } );
 ignores = ( 
   { level = "JOINS PARTS QUITS NICKS"; channels = ( "*" ); }
 );
