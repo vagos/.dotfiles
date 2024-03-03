@@ -9,11 +9,12 @@ export TERM="xterm-256color"
 
 export SD_ROOT=$HOME/bin
 export FZF_DEFAULT_COMMAND='find .'
+export SYSTEM_THEME="light"
+export BROWSER_START_PAGE="vagos.lamprou.xyz"
 
 export KEYTIMEOUT=1
 
 # Directories
-
 export XDG_MUSIC_DIR="$HOME/files/music"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
 export XDG_DATA_HOME="$HOME/.local/share"

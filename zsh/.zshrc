@@ -12,17 +12,20 @@ compinit
 source "$HOME/.config/lf/lfcd.sh"
 
 # Enable History
-HITSTSIZE=100
-SAVEHIST=100
+HITSTSIZE=1000
+SAVEHIST=1000
 HISTFILE=$HOME/.cache/zsh/history
+setopt hist_ignore_all_dups
 
 autoload -U colors && colors
 
-PROMPT_ICON='🐧'
+PROMPT_ICON='🍌'
 [[ $(hostname) == "desktop" ]] && PROMPT_ICON='🦍'
 [[ $(hostname) == "laptop" ]] && PROMPT_ICON='🐒'
 
 PROMPT="%F{blue}[${PROMPT_ICON} %1~]$%f "
+
+[[ $(whoami) == "root" ]] && PROMPT_ICON='👺' && PROMPT="%F{white}[${PROMPT_ICON} %1~]#%f "
 
 # Activate vim mode with <Escape>
 set -o vi
@@ -30,25 +33,26 @@ set -o vi
 # Some extra keybinds
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-
-# Enable ctr+L to clear
-# bindkey -x '"\C-l": clear'
+bindkey -v
+# bindkey '^R' history-incremental-search-backward
+# bindkey "\C-l" clear
 
 # Aliases
 alias less='less -r'
 alias rg='rg --color=always'
-
 alias ls='ls --color=auto'
 alias mv='mv -i'
 alias lf='lfcd'
-alias ll='ls -l'
+alias ll='ls -alFh'
 alias tm='tmux'
 alias vim='nvim'
-alias vi='vim'
+alias vi='vim' 
+alias vr='nv-remote' # open file on remote instance
 
 eval "$(zoxide init zsh)"
 
 # Plugins
+source /usr/share/fzf/key-bindings.zsh
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 # source /usr/share/zsh/plugins/zsh-sd/sd.plugin.zsh
