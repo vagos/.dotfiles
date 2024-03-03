@@ -1,6 +1,12 @@
+# flake8: noqa: F821
+import os
+
 config.load_autoconfig()
 
-c.url.start_pages = ["~/"]
+start_page = os.environ.get("BROWSER_START_PAGE", "~/")
+
+c.url.start_pages = [start_page]
+c.url.default_page = start_page
 
 c.url.searchengines["yt"] = "https://www.youtube.com/results?search_query={}"
 c.url.searchengines["aw"] = "https://wiki.archlinux.org/index.php?search={}"
@@ -20,4 +26,6 @@ config.bind('K', 'tab-next')
 
 config.bind(',m', 'hint links spawn mpv {hint-url}')
 
-c.editor.command=['alacritty','-e','nvim', '{file}']
+c.editor.command = ['alacritty', '-e', 'nvim', '{file}']
+
+c.qt.args.append("enable-experimental-web-platform-features")
