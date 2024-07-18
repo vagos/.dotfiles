@@ -1,8 +1,10 @@
-" disabling some annoying keymaps
+" disabling some annoying keys
 map <S-Up> <Nop>
 map <S-Down> <Nop>
 map <S-Left> <Nop>
 map <S-Right> <Nop>
+map <PageUp> <Nop>
+map <PageDown> <Nop>
 
 if &wildoptions =~ "pum"
     cnoremap <expr> <up> pumvisible() ? "<C-p>" : "\\<up>"
@@ -24,3 +26,8 @@ set spelllang=en,el,engr
 nnoremap <silent> <F6> :set spell!<cr>
 
 command! SynStack echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+
+lua << EOF
+vim.diagnostic.disable()
+EOF
+nnoremap <silent> <F7> :lua vim.diagnostic.enable()<CR>
