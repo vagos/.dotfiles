@@ -6,7 +6,8 @@ set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
 set cmdheight=1                         " More space for displaying messages
-set iskeyword+=-                      	" treat dash separated words as a word text object"
+set iskeyword+=-                     	  " treat dash separated words as a word text object"
+set iskeyword+=_                     	  " treat underscore separated words as a word text object"
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -30,7 +31,11 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set autochdir                           " Your working directory will always be the same as your working directory
 set noswapfile                          " No more swap files 
 set ignorecase
+set smartcase
+set incsearch
 set shell=/bin/zsh
+
+let g:netrw_browsex_viewer="xdg-open"
 
 filetype on
 filetype indent on
