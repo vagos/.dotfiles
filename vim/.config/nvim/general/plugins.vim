@@ -19,17 +19,23 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
+" Inject LSP Diagnostics
+Plug 'nvimtools/none-ls.nvim'
+
 "  Snippets
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
  " Colorschemes
 Plug 'itchyny/landscape.vim'
 Plug 'yorickpeterse/vim-paper'
 Plug 'erik-j-d/lightline-paper'
+Plug 'junegunn/seoul256.vim'
+Plug 'nanotech/jellybeans.vim'
 
 " Colorize colors in text.
 Plug 'chrisbra/colorizer'
@@ -102,10 +108,21 @@ Plug 'nanotee/zoxide.vim'
 Plug 'gyim/vim-boxdraw'
 Plug 'jbyuki/venn.nvim'
 
+" Visual Multi
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+" Scratchpad
+Plug 'metakirby5/codi.vim'
+
+" Image-Clip
+Plug 'HakonHarnes/img-clip.nvim'
+
 " Language Specific
 Plug 'sheerun/vim-polyglot'
 Plug 'urbit/hoon.vim'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+Plug 'zk-org/zk-nvim'
+Plug 'rkaminsk/vim-syntax-clingo'
 
 call plug#end()
 
@@ -124,4 +141,7 @@ source $HOME/.config/nvim/plugin/lsp.lua
 source $HOME/.config/nvim/plugin/git.vim
 source $HOME/.config/nvim/plugin/commentary.vim
 source $HOME/.config/nvim/plugin/undotree.vim
-" source $HOME/.config/nvim/plugin/polyglot.vim
+source $HOME/.config/nvim/plugin/abolish.vim
+source $HOME/.config/nvim/plugin/null-ls.lua
+source $HOME/.config/nvim/plugin/polyglot.vim
+source $HOME/.config/nvim/plugin/languages.lua
