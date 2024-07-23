@@ -48,3 +48,7 @@ set pumheight=4
 if has('termguicolors')
   set termguicolors
 endif
+
+lua << EOF
+vim.diagnostic.disable()
+EOF
