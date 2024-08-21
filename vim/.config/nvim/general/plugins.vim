@@ -80,6 +80,9 @@ Plug 'tpope/vim-commentary'
 " Abolish
 Plug 'tpope/vim-abolish'
 
+"" Coerce
+"Plug 'gregorias/coerce.nvim'
+
 " REPL
 Plug 'jpalardy/vim-slime'
 

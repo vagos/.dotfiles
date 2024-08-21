@@ -109,15 +109,3 @@ cmp.setup({
         { name = "nvim_lsp_signature_help" },
     }
 })
-
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
-  command = 'silent! EslintFixAll',
-  group = vim.api.nvim_create_augroup('MyAutocmdsJavaScripFormatting', {}),
-})
-
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = { '*.py' },
-  command = 'silent! LspZeroFormat',
-  group = vim.api.nvim_create_augroup('MyAutocmdsPythonFormatting', {}),
-})
