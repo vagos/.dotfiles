@@ -8,7 +8,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'VonHeikemen/lsp-zero.nvim'
+Plug 'VonHeikemen/lsp-zero.nvim', { 'branch': 'v1.x' }
 
 " Autocompletion
 Plug 'hrsh7th/nvim-cmp'
