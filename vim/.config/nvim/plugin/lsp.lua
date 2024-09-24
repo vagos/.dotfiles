@@ -3,8 +3,6 @@ local cmp = require('cmp')
 
 lsp.preset('recommended')
 
--- lsp.skip_server_setup({'ltex'})
-
 lsp.set_preferences({
   suggest_lsp_servers = true,
   setup_servers_on_start = true,
@@ -16,7 +14,7 @@ lsp.set_preferences({
   sign_icons = { }
 })
 
-require('lspconfig').tsserver.setup({
+require('lspconfig').ts_ls.setup({
     init_options = {
         preferences = {
             disableSuggestions = true,
