@@ -199,6 +199,8 @@ gui:
 
 # Config relating to git
 git:
+  overrideGpg: true
+
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md
   paging:
     # Value of the --color arg in the git diff command. Some pagers want this to be set to 'always' and some want it set to 'never'
@@ -259,9 +261,6 @@ git:
   # Command used to display git log of all branches in the main window
   allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
 
-  # If true, do not spawn a separate process when using GPG
-  overrideGpg: false
-
   # If true, do not allow force pushes
   disableForcePushing: false
 
@@ -285,12 +284,6 @@ git:
     #
     # Deprecated: Configure this with `Log menu -> Commit sort order` (<c-l> in the commits window by default).
     order: topo-order
-
-    # This determines whether the git graph is rendered in the commits panel
-    # One of 'always' | 'never' | 'when-maximised'
-    #
-    # Deprecated: Configure this with `Log menu -> Show git graph` (<c-l> in the commits window by default).
-    showGraph: false
 
     # displays the whole git graph by default in the commits view (equivalent to passing the `--all` argument to `git log`)
     showWholeGraph: false
