@@ -1,7 +1,6 @@
+# uninteresting files/folders
 **/bookmarks
 **/quickmarks
-
-# uninteresting files/folders
 *.log
 task/.config/task/certs
 vim/.config/nvim/autoload/plugged/*
@@ -9,3 +8,4 @@ ncmpcpp/.config/ncmpcpp/.lyrics
 qutebrowser/.config/qutebrowser/qsettings
 qutebrowser/.config/qutebrowser/autoconfig.yml
 irssi/.irssi/otr
+arbtt/.arbtt/capture.log.lck
