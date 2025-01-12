@@ -13,11 +13,9 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
 set conceallevel=0                      " So that I can see `` in markdown files
-set shiftwidth=4                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
+set expandtab                           " Converts tabs to spaces
 set laststatus=2                        " Always display the status line
 set number                              " Line numbers
 set background=dark                     " tell vim what the background color looks like
