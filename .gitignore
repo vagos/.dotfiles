@@ -9,3 +9,4 @@ qutebrowser/.config/qutebrowser/qsettings
 qutebrowser/.config/qutebrowser/autoconfig.yml
 irssi/.irssi/otr
 arbtt/.arbtt/capture.log.lck
+lazygit/.config/lazygit/state.yml
