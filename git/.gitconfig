@@ -16,3 +16,5 @@
 	rebase = true
 [core]
 	excludesfile = ~/.gitignore
+[branch]
+	sort = -committerdate
