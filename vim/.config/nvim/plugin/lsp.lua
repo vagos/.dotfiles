@@ -51,6 +51,28 @@ require('lspconfig').pyright.setup({
 require('lspconfig').rust_analyzer.setup({
 })
 
+require('lspconfig').bashls.setup({
+})
+
+require('lspconfig').clangd.setup({
+    cmd = { "clangd", "--background-index" },
+    init_options = {
+        clangdFileStatus = true
+    }
+})
+
+-- setup lua_ls and make sure it doesn't flag the vim global as unknown
+require('lspconfig').lua_ls.setup({
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' },
+            },
+        },
+    },
+})
+
+
 lsp.setup()
 
 -- after setup

@@ -6,14 +6,17 @@ zstyle :compinstall filename "$HOME/.zshrc"
 # autoload -U edit-command-line
 
 # Plugins
-source /usr/share/fzf/key-bindings.zsh
+source <(fzf --zsh)
+# source /usr/share/fzf/key-bindings.zsh
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 # Sourcing
 # source /usr/share/nvm/init-nvm.sh
+source /Users/vagozino/.rvm/scripts/rvm
 source "$HOME/.config/lf/lfcd.sh"
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 
 # Completions
 SD="/nix/store/6c9jz8vkdmyn1dz4wj0dxrrpc6acgcjg-user-environment/share/zsh/site-functions"
@@ -35,7 +38,7 @@ setopt HIST_VERIFY
 
 # autoload -U colors && colors
 
-PROMPT_ICON='🍌'
+PROMPT_ICON='🍎'
 [[ $(hostname) == "desktop" ]] && PROMPT_ICON='🦍'
 [[ $(hostname) == "laptop" ]] && PROMPT_ICON='🐒'
 
@@ -54,7 +57,7 @@ bindkey -v
 # bindkey "\C-l" clear
 
 eval "$(zoxide init zsh)"
-eval "$(dircolors ~/.dircolors)"
+# eval "$(dircolors ~/.dircolors)"
 
 autoload -U compinit && compinit
 zmodload -i zsh/complist
@@ -75,3 +78,25 @@ alias vr='nv-remote' # open file on remote instance
 # Behavioral Aliaes
 alias buku='buku --np'
 alias xclip='xclip -selection clipboard'
+export PATH="/opt/homebrew/opt/util-linux/bin:$PATH"
+export PATH="/opt/homebrew/opt/util-linux/sbin:$PATH"
+export PATH="/Users/vagozino/.gem/ruby/2.6.0/bin":$PATH
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="/opt/homebrew/anaconda3/bin:$PATH"  # commented out by conda initialize
+
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
