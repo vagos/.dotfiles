@@ -1,5 +1,7 @@
 local lsp = require('lsp-zero')
 local cmp = require('cmp')
+require('mason').setup()
+require('mason-lspconfig').setup()
 
 lsp.preset('recommended')
 
