@@ -129,22 +129,6 @@ Plug 'rkaminsk/vim-syntax-clingo'
 
 call plug#end()
 
-source $HOME/.config/nvim/plugin/lightline.vim
-source $HOME/.config/nvim/plugin/vimwiki.vim
-source $HOME/.config/nvim/plugin/vimspector.vim
-source $HOME/.config/nvim/plugin/vim-slime.vim
-source $HOME/.config/nvim/plugin/project.lua
-source $HOME/.config/nvim/plugin/fzf.vim
-source $HOME/.config/nvim/plugin/copilot.vim
-source $HOME/.config/nvim/plugin/treesitter.lua
-source $HOME/.config/nvim/plugin/appearance.lua
-source $HOME/.config/nvim/plugin/context.lua
-source $HOME/.config/nvim/plugin/trouble.lua
-source $HOME/.config/nvim/plugin/lsp.lua
-source $HOME/.config/nvim/plugin/git.vim
-source $HOME/.config/nvim/plugin/commentary.vim
-source $HOME/.config/nvim/plugin/undotree.vim
-source $HOME/.config/nvim/plugin/abolish.vim
-source $HOME/.config/nvim/plugin/null-ls.lua
-source $HOME/.config/nvim/plugin/polyglot.vim
-source $HOME/.config/nvim/plugin/languages.lua
+for file in split(glob("$HOME/.config/nvim/plugin/*"), '\n')
+  execute 'source' file
+endfor
