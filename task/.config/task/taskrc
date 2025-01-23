@@ -32,3 +32,5 @@ include /usr/share/doc/task/rc/dark-256.theme
 
 verbose=blank,footnote,label,new-id,affected,edit,special,project,sync,unwait
 news.version=2.6.0
+uda.priority.values=H,M,,L
+urgency.uda.priority.L.coefficient=-1.8
