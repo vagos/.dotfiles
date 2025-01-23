@@ -117,13 +117,9 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Scratchpad
 Plug 'metakirby5/codi.vim'
 
-" Image-Clip
-Plug 'HakonHarnes/img-clip.nvim'
-
 " Language Specific
 Plug 'sheerun/vim-polyglot'
 Plug 'urbit/hoon.vim'
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'zk-org/zk-nvim'
 Plug 'rkaminsk/vim-syntax-clingo'
 
