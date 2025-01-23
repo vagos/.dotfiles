@@ -114,6 +114,9 @@ Plug 'jbyuki/venn.nvim'
 " Visual Multi
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+" Move lines
+Plug 'matze/vim-move'
+
 " Scratchpad
 Plug 'metakirby5/codi.vim'
 
