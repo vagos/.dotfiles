@@ -1,0 +1,12 @@
+directory: /mnt/dj/music
+library: ~/.local/share/beets/library.db
+import:
+  move: yes
+paths:
+  singleton: $artist/$title
+plugins: edit fromfilename fetchart embedart web random spotify fuzzy play playlist
+
+# Plugin-specific configuration
+
+bandcamp: 
+  art: true
