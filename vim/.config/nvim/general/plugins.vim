@@ -5,10 +5,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'nvim-lua/plenary.nvim'
 
 " LSP Support
-Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'VonHeikemen/lsp-zero.nvim', { 'branch': 'v1.x' }
+Plug 'neovim/nvim-lspconfig'
 
 " Autocompletion
 Plug 'hrsh7th/nvim-cmp'

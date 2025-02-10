@@ -1,87 +1,29 @@
-local lsp = require('lsp-zero')
 local cmp = require('cmp')
 require('mason').setup()
 require('mason-lspconfig').setup()
 
-lsp.preset('recommended')
-
-lsp.set_preferences({
-  suggest_lsp_servers = true,
-  setup_servers_on_start = true,
-  set_lsp_keymaps = true,
-  configure_diagnostics = true,
-  cmp_capabilities = true,
-  manage_nvim_cmp = true,
-  call_servers = 'local',
-  sign_icons = { }
-})
-
-require('lspconfig').ts_ls.setup({
-    init_options = {
-        preferences = {
-            disableSuggestions = true,
-        },
-    },
-})
-
-require('lspconfig').pylsp.setup({
-    settings = {
-        pylsp = {
-            plugins = {
-                pycodestyle = {
-                    ignore = { "E501" },
-                    maxLineLength = 120
-                }
-            }
-        }
-    }
-})
-
--- Disable the E501 error for python
-require('lspconfig').pyright.setup({
-  settings = {
-    python = {
-      analysis = {
-        errors = {
-          E501 = false
-        }
-      }
-    }
-  }
-})
-
-require('lspconfig').rust_analyzer.setup({
-})
-
-require('lspconfig').bashls.setup({
-})
-
-require('lspconfig').clangd.setup({
-    cmd = { "clangd", "--background-index" },
-    init_options = {
-        clangdFileStatus = true
-    }
-})
-
--- setup lua_ls and make sure it doesn't flag the vim global as unknown
-require('lspconfig').lua_ls.setup({
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' },
+require("mason-lspconfig").setup_handlers {
+    -- Default handler
+    function (server_name) -- default handler (optional)
+        require("lspconfig")[server_name].setup {}
+    end,
+    -- Dedicated handlers for specific servers.
+    ["lua_ls"] = function ()
+        require("lspconfig").lua_ls.setup {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" },
+                    },
+                },
             },
-        },
-    },
-})
-
-
-lsp.setup()
-
--- after setup
+        }
+    end
+}
 
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
+  virtual_text = { severity = vim.diagnostic.severity.ERROR }, 
+  signs = false,
   update_in_insert = false,
   underline = true,
   severity_sort = false,
@@ -101,6 +43,15 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
     }
 )
 
+vim.keymap.set("n", "<C-k>", function()
+  vim.diagnostic.open_float(nil, {
+    focusable = false,   -- Don't let it steal focus
+    border = "single", 
+    source = "always",
+    prefix = "",         -- No prefix
+  })
+end, { noremap = true, silent = true })
+
 require('lspconfig.ui.windows').default_options = {
   border = "none"
 }
@@ -116,6 +67,8 @@ cmp.setup({
     },
 
     mapping = cmp.mapping.preset.insert({
+      ['<Tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+      ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
