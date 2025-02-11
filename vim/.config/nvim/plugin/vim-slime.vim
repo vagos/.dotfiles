@@ -1,6 +1,6 @@
 let g:slime_target = "neovim"
 
-xmap <Leader>c <Plug>SlimeRegionSend
-nmap <Leader>c <Plug>SlimeParagraphSend
+xmap <Leader>cs <Plug>SlimeRegionSend
+nmap <Leader>cs <Plug>SlimeParagraphSend
 
 nmap <Leader>cn :vsplit<CR> :terminal<CR> :echo &channel<CR>
