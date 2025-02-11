@@ -22,7 +22,7 @@ require("mason-lspconfig").setup_handlers {
 }
 
 vim.diagnostic.config({
-  virtual_text = { severity = vim.diagnostic.severity.ERROR }, 
+  virtual_text = { severity = vim.diagnostic.severity.ERROR },
   signs = false,
   update_in_insert = false,
   underline = true,
@@ -46,7 +46,7 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
 vim.keymap.set("n", "<C-k>", function()
   vim.diagnostic.open_float(nil, {
     focusable = false,   -- Don't let it steal focus
-    border = "single", 
+    border = "single",
     source = "always",
     prefix = "",         -- No prefix
   })
