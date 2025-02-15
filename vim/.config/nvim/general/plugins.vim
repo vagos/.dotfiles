@@ -127,6 +127,6 @@ Plug 'rkaminsk/vim-syntax-clingo'
 
 call plug#end()
 
-for file in split(glob("$HOME/.config/nvim/plugin/*"), '\n')
+for file in split(glob("$HOME/.config/nvim/specific/*"), '\n')
   execute 'source' file
 endfor
