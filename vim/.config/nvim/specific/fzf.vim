@@ -2,7 +2,6 @@
 
 map <leader>f :Files<cr>
 nnoremap <leader>g :Rg<CR>
-nnoremap <leader>tg :Tags<CR>
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
@@ -28,6 +27,3 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
-
-let g:fzf_tags_command = 'ctags -R'
-
