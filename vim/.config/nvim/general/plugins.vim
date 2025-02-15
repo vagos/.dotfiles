@@ -119,6 +119,9 @@ Plug 'matze/vim-move'
 " Scratchpad
 Plug 'metakirby5/codi.vim'
 
+" Spelling
+Plug 'psliwka/vim-dirtytalk', { 'do': ':DirtytalkUpdate' }
+
 " Language Specific
 Plug 'sheerun/vim-polyglot'
 Plug 'urbit/hoon.vim'

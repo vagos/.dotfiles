@@ -28,6 +28,7 @@ set formatoptions-=cro    " Stop newline continution of comments
 set clipboard=unnamedplus " Copy paste between vim and everything else
 set autochdir             " Your working directory will always be the same as your working directory
 set noswapfile            " No more swap files
+set spelllang=en,el,programming
 set ignorecase
 set smartcase
 set incsearch
