@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+TASK=$(cat - | jq -c)
+
+# check if inside a git repo
+if ! git rev-parse --is-inside-work-tree > /dev/null; then
+  echo "$TASK"
+  exit 0
+fi
+
+# get the git root directory
+GIT_ROOT=$(git rev-parse --show-toplevel)
+# get the repo's description
+DESCRIPTION=$(cat "$GIT_ROOT/.git/description")
+
+# if its the default description, use the repo name
+if [[ "$DESCRIPTION" =~ "Unnamed repository" ]]; then
+  DESCRIPTION=$(basename "$GIT_ROOT")
+fi
+
+# update the task project with the description
+TASK=$(echo "$TASK" | jq -c ".project = \"$DESCRIPTION\"")
+
+echo "$TASK"
