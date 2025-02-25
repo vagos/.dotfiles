@@ -2,6 +2,8 @@
 data.location=~/.local/share/task
 hooks.location=~/.config/task/hooks
 
+uda.url.type=string
+uda.url.label=URL
 
 verbose=blank,footnote,label,new-id,affected,edit,special,project,sync,unwait
 uda.priority.values=H,M,,L
