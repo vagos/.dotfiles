@@ -61,8 +61,8 @@ Plug 'junegunn/fzf.vim'
 " Context
 Plug 'nvim-treesitter/nvim-treesitter-context'
 
-" Projects
-Plug 'ahmedkhalf/project.nvim'
+" Root directory
+Plug 'airblade/vim-rooter'
 
 " Useful Pair-Binds
 Plug 'tpope/vim-unimpaired'
