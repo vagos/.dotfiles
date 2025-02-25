@@ -1,3 +1,3 @@
 require("transparent").setup({ })
 
-vim.cmd('colorscheme desert')
+vim.cmd('colorscheme evening')
