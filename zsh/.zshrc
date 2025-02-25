@@ -54,8 +54,3 @@ alias vr='nv-remote' # open file on remote instance
 
 alias buku='buku --np'
 alias xclip='xclip -selection clipboard'
-
-export PATH="/opt/homebrew/opt/util-linux/bin:$PATH"
-export PATH="/opt/homebrew/opt/util-linux/sbin:$PATH"
-export PATH="/Users/vagozino/.gem/ruby/2.6.0/bin":$PATH
-export PATH="$PATH:$HOME/.rvm/bin"
