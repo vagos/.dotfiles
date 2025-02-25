@@ -3,7 +3,8 @@
 map <leader>f :Files<cr>
 nnoremap <leader>g :Rg<CR>
 
-let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+let g:fzf_layout = { 'down': '40%' }
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline --border=sharp'
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 " Get text in files with Rg
