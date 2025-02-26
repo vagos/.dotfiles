@@ -11,3 +11,4 @@ map D delete
 map . set hidden!
 map <enter> open
 map <c-o> !dragon-drop "$f"
+map <c-e> !nv-remote "$f"
