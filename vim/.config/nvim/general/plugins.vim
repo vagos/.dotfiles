@@ -1,4 +1,3 @@
-" Vim Plug
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Libraries
@@ -28,6 +27,7 @@ Plug 'rafamadriz/friendly-snippets'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'nvim-treesitter/nvim-treesitter-context'
 
  " Colorschemes
 Plug 'erik-j-d/lightline-paper'
@@ -56,9 +56,6 @@ Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Context
-Plug 'nvim-treesitter/nvim-treesitter-context'
-
 " Root directory
 Plug 'airblade/vim-rooter'
 
@@ -78,7 +75,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 
 "" Coerce
-"Plug 'gregorias/coerce.nvim'
+Plug 'gregorias/coerce.nvim'
 
 " REPL
 Plug 'jpalardy/vim-slime'
