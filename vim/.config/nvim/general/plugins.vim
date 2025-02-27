@@ -30,8 +30,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
  " Colorschemes
-Plug 'itchyny/landscape.vim'
-Plug 'yorickpeterse/vim-paper'
 Plug 'erik-j-d/lightline-paper'
 Plug 'junegunn/seoul256.vim'
 Plug 'nanotech/jellybeans.vim'
