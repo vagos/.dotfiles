@@ -21,7 +21,7 @@ nnoremap N Nzz
 
 noremap Q !!sh<CR>
 
-" Spell Check
+" spell check
 nnoremap <silent> <F6> :set spell!<cr>
 
 command! SynStack echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
