@@ -25,3 +25,6 @@ noremap Q !!sh<CR>
 nnoremap <silent> <F6> :set spell!<cr>
 
 command! SynStack echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+
+" mouse
+nnoremap <silent> <LeftMouse> m'<LeftMouse>
