@@ -74,7 +74,7 @@ case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
 		image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
 		;;
 	*.ino) batorcat --language=cpp "$1" ;;
-  *.json) cat "$1" | jq -C ;;
+  *.json) jq -C < "$1" ;;
 	*) batorcat "$1" ;; 
 esac
 exit 0
