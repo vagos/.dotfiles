@@ -75,6 +75,6 @@ case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
 		;;
 	*.ino) batorcat --language=cpp "$1" ;;
   *.json) cat "$1" | jq -C ;;
-	*) cat "$1" ;; 
+	*) batorcat "$1" ;; 
 esac
 exit 0
