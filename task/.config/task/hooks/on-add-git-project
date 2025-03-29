@@ -3,7 +3,7 @@
 TASK=$(cat - | jq -c)
 
 # check if inside a git repo
-if ! git rev-parse --is-inside-work-tree > /dev/null; then
+if ! git rev-parse --is-inside-work-tree &> /dev/null; then
   echo "$TASK"
   exit 0
 fi
