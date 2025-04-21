@@ -4,9 +4,28 @@ import:
   move: yes
 paths:
   singleton: $artist/$title
-plugins: edit fromfilename fetchart embedart web random spotify fuzzy play playlist
+plugins:
+  - edit
+  - info
+  - describe
+  - badfiles
+  - fromfilename  
+  - fetchart 
+  - lastgenre
+  - embedart 
+  - web 
+  - random 
+  - duplicates
+  - fuzzy 
+  - play 
+  - playlist
+  - autobpm
+  - spotify 
+  - discogs
+  - ytimport
 
 # Plugin-specific configuration
 
 bandcamp: 
   art: true
+
