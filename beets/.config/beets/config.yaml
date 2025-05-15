@@ -29,3 +29,8 @@ plugins:
 bandcamp: 
   art: true
 
+lastgenre:
+  count: 1
+  prefer_specific: yes
+  title_case: no
+  source: track
