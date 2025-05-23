@@ -1,3 +1,7 @@
+# Enable completion
+autoload -Uz compinit
+compinit
+
 # Enable history
 HITSTSIZE=1000
 SAVEHIST=1000
