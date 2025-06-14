@@ -19,7 +19,7 @@ plugins:
   - fuzzy 
   - play 
   - playlist
-  - autobpm
+  - scrub
   - spotify 
   - discogs
   - ytimport
