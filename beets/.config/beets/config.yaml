@@ -32,7 +32,7 @@ bandcamp:
 lastgenre:
   count: 1
   prefer_specific: yes
-  title_case: no
+  title_case: yes
   source: track
 
 duplicates:
