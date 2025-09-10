@@ -1,24 +1,25 @@
-SCRIPTS=/home/vagozino/.config/i3blocks/scripts
+SCRIPTS=$HOME/.config/i3blocks/scripts
+# Need to use `sh -c` in order to expand $HOME
 
 [task]
-command=$SCRIPTS/task
+command=sh -c "$SCRIPTS/task"
 interval=1
 
 [disk]
-command=$SCRIPTS/disk
+command=sh -c "$SCRIPTS/disk"
 interval=60
 
 [volume]
-command=$SCRIPTS/volume
+command=sh -c "$SCRIPTS/volume"
 interval=persist
 
 [battery]
-command=$SCRIPTS/battery
+command=sh -c "$SCRIPTS/battery"
 markup=pango
 interval=1
 
 [time]
-command=$SCRIPTS/time
+command=sh -c "$SCRIPTS/time"
 interval=50
 TZ_FILE=~/.tz
 STRFTIME_FORMAT=%a %d %b %H:%M
