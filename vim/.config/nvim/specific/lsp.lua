@@ -1,15 +1,24 @@
 local cmp = require('cmp')
+local luasnip = require('luasnip')
+
+luasnip.config.setup({})
+require('luasnip.loaders.from_vscode').lazy_load()
 require('mason').setup()
 require('mason-lspconfig').setup()
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("mason-lspconfig").setup_handlers {
     -- Default handler
     function (server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {}
+        require("lspconfig")[server_name].setup {
+            capabilities = capabilities,
+        }
     end,
     -- Dedicated handlers for specific servers.
     ["lua_ls"] = function ()
         require("lspconfig").lua_ls.setup {
+            capabilities = capabilities,
             settings = {
                 Lua = {
                     diagnostics = {
@@ -57,6 +66,12 @@ require('lspconfig.ui.windows').default_options = {
 }
 
 cmp.setup({
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
+
     window = {
         completion = cmp.config.window.bordered({
             border = "none"
@@ -67,8 +82,24 @@ cmp.setup({
     },
 
     mapping = cmp.mapping.preset.insert({
-      ['<Tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-      ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+      ['<Tab>'] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+              cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+          elseif luasnip.expand_or_jumpable() then
+              luasnip.expand_or_jump()
+          else
+              fallback()
+          end
+      end, { 'i', 's' }),
+      ['<S-Tab>'] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+              cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+          elseif luasnip.jumpable(-1) then
+              luasnip.jump(-1)
+          else
+              fallback()
+          end
+      end, { 'i', 's' }),
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
