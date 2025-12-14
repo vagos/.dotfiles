@@ -3,6 +3,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Libraries
 Plug 'nvim-lua/plenary.nvim'
 
+" Language Specific
+Plug 'sheerun/vim-polyglot'
+Plug 'urbit/hoon.vim'
+Plug 'zk-org/zk-nvim'
+Plug 'rkaminsk/vim-syntax-clingo'
+Plug 'kaarmu/typst.vim'
+
 " LSP Support
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -116,12 +123,6 @@ Plug 'metakirby5/codi.vim'
 
 " Spelling
 Plug 'psliwka/vim-dirtytalk', { 'do': ':DirtytalkUpdate' }
-
-" Language Specific
-Plug 'sheerun/vim-polyglot'
-Plug 'urbit/hoon.vim'
-Plug 'zk-org/zk-nvim'
-Plug 'rkaminsk/vim-syntax-clingo'
 
 call plug#end()
 
