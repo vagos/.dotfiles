@@ -5,7 +5,7 @@ nnoremap <leader>g :Rg<CR>
 
 let g:fzf_layout = { 'down': '40%' }
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline --border=sharp'
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
 
 " Get text in files with Rg
 command! -bang -nargs=* Rg
