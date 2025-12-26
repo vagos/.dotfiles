@@ -328,7 +328,7 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "Evangelos Labrou";
+    real_name = "Evangelos Lamprou";
     user_name = "vagozino";
     nick = "vagozino";
   };
