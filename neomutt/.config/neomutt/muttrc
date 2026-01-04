@@ -1,5 +1,5 @@
 # vim: filetype=neomuttrc
-set mailcap_path = $HOME/.config/mutt/mailcap
+set mailcap_path = $HOME/.config/neomutt/mailcap
 set mime_type_query_command = "file --mime-type -b %s"
 set date_format="%y/%m/%d %I:%M%p"
 set index_format="%2C %Z %?X?A& ? %D %-15.15F %s (%-4.4c)"
@@ -19,6 +19,9 @@ set forward_quote		# include message in forwards
 set reverse_name		# reply as whomever it was to
 set include			# include message in replies
 set mail_check=60 # to avoid lags using IMAP with some email providers (yahoo for example)
+set use_threads = yes
+set edit_headers = yes
+set autoedit = yes
 auto_view text/html		# automatically show html (mailcap uses lynx)
 auto_view application/pgp-encrypted
 #set display_filter = "tac | sed '/\\\[-- Autoview/,+1d' | tac" # Suppress autoview messages.
@@ -26,9 +29,10 @@ alternative_order text/plain text/enriched text/html
 
 
 set imap_check_subscribed 
-set message_cachedir = "~/.cache/mutt"
-set header_cache = ~/.cache/mutt
+set message_cachedir = ~/.cache/neomutt/bodies
+set header_cache = ~/.cache/neomutt/headers
 unset imap_passive
+set message_cache_clean = yes
 
 set editor=$EDITOR
 
@@ -99,7 +103,7 @@ macro index,pager Ca ";<copy-message>=Archive<enter>" "copy mail to archive"
 
 macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
-macro index O "<shell-escape>mw -Y<enter>" "run mw -Y to sync all mail"
+macro index O "<shell-escape>mbsync -a<enter>" "sync all mail with mbsync"
 macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>printf 'Enter a search term to find with notmuch: '; read x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
 macro index A "<limit>all\n" "show all messages (undo limit)"
 
@@ -193,18 +197,12 @@ mono body bold "^gpg: BAD signature from.*"
 color body red default "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
 
 
-# === contact.vagoslabrou Account ====
+# Accounts
+source "~/.config/neomutt/accounts/vagos_gmail"
+account-hook '^imaps://imap.gmail.com:993' "source ~/.config/neomutt/accounts/vagos_gmail"
+account-hook '^imaps://imap.upnet.gr:993' "source ~/.config/neomutt/accounts/evangelos_upnet"
+# account-hook '^/var/spool/mail' "source ~/.config/neomutt/accounts/local_spool"
 
-#source "~/.config/mutt/accounts/contact_gmail"
-## Here we use the $folder variable that has just been set in the sourced file.
-## We must set it right now otherwise the 'folder' variable will change in the next sourced file.
-#folder-hook $folder 'source ~/.config/mutt/accounts/contact_gmail'
-
-# ==== vagozino Account ==== 
-
-# source "~/.config/neomutt/accounts/vagozino_gmail"
-# folder-hook $folder 'source ~/.config/neomutt/accounts/vagozino_gmail'
-
-# === e.lambrou Account ====
-source "~/.config/neomutt/accounts/evangelos_upnet"
-folder-hook $folder 'source ~/.config/neomutt/accounts/evangelos_upnet'
+macro index,pager Cg "<enter-command>source ~/.config/neomutt/accounts/vagos_gmail<enter><change-folder>=INBOX<enter>" "switch to Gmail"
+macro index,pager Cu "<enter-command>source ~/.config/neomutt/accounts/evangelos_upnet<enter><change-folder>=INBOX<enter>" "switch to Upnet"
+# macro index,pager Cl "<enter-command>source ~/.config/neomutt/accounts/local_spool<enter>" "switch to Local Spool"
