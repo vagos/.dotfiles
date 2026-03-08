@@ -1,4 +1,4 @@
-require 'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.config').setup({
 
   auto_install = true,
 
@@ -47,4 +47,4 @@ require 'nvim-treesitter.configs'.setup {
     },
   },
 
-}
+})

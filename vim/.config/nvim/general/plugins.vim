@@ -33,7 +33,7 @@ Plug 'rafamadriz/friendly-snippets'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter-context'
 
  " Colorschemes

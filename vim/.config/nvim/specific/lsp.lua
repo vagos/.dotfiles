@@ -1,34 +1,33 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
+local mason_lspconfig = require('mason-lspconfig')
 
 luasnip.config.setup({})
 require('luasnip.loaders.from_vscode').lazy_load()
 require('mason').setup()
-require('mason-lspconfig').setup()
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+mason_lspconfig.setup({
+  automatic_enable = false,
+})
 
-require("mason-lspconfig").setup_handlers {
-    -- Default handler
-    function (server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {
-            capabilities = capabilities,
-        }
-    end,
-    -- Dedicated handlers for specific servers.
-    ["lua_ls"] = function ()
-        require("lspconfig").lua_ls.setup {
-            capabilities = capabilities,
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { "vim" },
-                    },
-                },
-            },
-        }
-    end
-}
+for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
+  local config = {
+    capabilities = capabilities,
+  }
+
+  if server_name == "lua_ls" then
+    config.settings = {
+      Lua = {
+        diagnostics = {
+          globals = { "vim" },
+        },
+      },
+    }
+  end
+
+  vim.lsp.config(server_name, config)
+  vim.lsp.enable(server_name)
+end
 
 vim.diagnostic.config({
   virtual_text = { severity = vim.diagnostic.severity.ERROR },
