@@ -6,6 +6,8 @@ xbanish       & # hide mouse cursor
 arbtt-capture & # time tracking
 rescrobbled   & # music scrobbling
 mpris-proxy   & # bluetooth headset gestures
+xscreensaver --no-splash & # screen saver
+lightson+ -d 5 & # screen saver supressor
 
 setxkbmap -option caps:escape 
 setxkbmap -model pc105 -layout us,gr -variant qwerty -option grp:lctrl_lwin_toggle
